@@ -1,0 +1,14 @@
+[ui]
+username = Neil Traft <ntraft@gmail.com>
+
+[extensions]
+hgext.color =
+hgext.extdiff = 
+hgext.graphlog =
+
+[extdiff]
+cmd.diffy = fmdiff
+
+[merge-tools]
+filemerge.executable = /usr/local/bin/fmdiff
+filemerge.args = $local $other -ancestor $base -merge $output
