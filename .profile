@@ -32,7 +32,7 @@ export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 5)\]\w \[$(tput sgr0)\]$ "
 
 # Various aliases
 alias ls='ls -h'
-alias l='ls -h'
+alias l='ls -hA'
 alias ll='ls -lhA'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
 
