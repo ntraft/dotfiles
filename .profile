@@ -42,3 +42,5 @@ alias l='ls -hA'
 alias ll='ls -lhA'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
 
+# For Python virtualenvwrapper
+source /usr/local/share/python/virtualenvwrapper.sh
