@@ -1,7 +1,13 @@
-# Setting the path for MacPorts.  Man should be able to find the corresponding
-# manpath automatically.
-export PATH=$PATH:'/opt/local/bin:/opt/local/sbin'
+# Prepend the MacPorts path so as to override built-ins.  Man should be able to
+# find the corresponding manpath automatically.
+export PATH='/opt/local/bin:/opt/local/sbin':$PATH
 #export MANPATH=$MANPATH:/opt/local/share/man
+
+# Also prepend python install scripts.
+export PATH='/usr/local/share/python':$PATH
+
+# Prepend the Homebrew path so as to override built-ins.
+export PATH='/usr/local/bin':$PATH
 
 # Setting the path for XCode Dev Tools.  Man should be able to find the 
 # corresponding manpath automatically.
@@ -36,3 +42,5 @@ alias l='ls -hA'
 alias ll='ls -lhA'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
 
+# For Python virtualenvwrapper
+source /usr/local/share/python/virtualenvwrapper.sh
