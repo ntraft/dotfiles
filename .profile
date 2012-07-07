@@ -27,8 +27,8 @@ export PATH=$PATH:'/opt/local/lib/erlang/bin'
 # Set Maven Home variable so it can be seen by IntelliJ and others
 export M2_HOME='/opt/local/share/java/maven3'
 
-# Adding EDITOR variable for TextMate 10/05/2009
-export EDITOR='mate -w'
+# Some programs, like git and hg, look for the EDITOR variable.
+export EDITOR='vim'
 
 # Enabling colorized output for programs which support it
 export CLICOLOR=true
