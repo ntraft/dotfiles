@@ -3,3 +3,12 @@
 [user]
 	name = Neil Traft
 	email = ntraft@gmail.com
+[core]
+	excludesfile = /Users/ntraft/.gitignore
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	di = diff
+	br = branch
+
