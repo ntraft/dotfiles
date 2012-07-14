@@ -12,11 +12,10 @@ export PATH='/usr/local/bin':$PATH
 # Setting the path for XCode Dev Tools.  Man should be able to find the 
 # corresponding manpath automatically.
 export PATH=$PATH:'/Developer/Tools:/Developer/usr/bin:/Developer/usr/sbin'
-#export MANPATH=$MANPATH:/Developer/usr/share/man
 
 # Setting the path for Android Tools.
-export PATH=$PATH:'/Developer/SDKs/android-sdk/tools:/Developer/SDKs/android-sdk/platform-tools'
-export PATH=$PATH:'/Developer/SDKs/android-ndk:/Developer/SDKs/android-ndk/tools'
+export PATH=$PATH:'/Developer/android-sdk/tools:/Developer/android-sdk/platform-tools'
+export PATH=$PATH:'/Developer/android-ndk:/Developer/android-ndk/tools'
 
 # Setting the path for Flex SDK command-line tools.
 export PATH=$PATH:'/Applications/Adobe Flex Builder 3/sdks/3.2.0/bin'
