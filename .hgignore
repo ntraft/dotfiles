@@ -1,0 +1,33 @@
+syntax: glob
+.DS_Store
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.Xauthority
+.bash_history
+.eclipse_keyring
+.fontconfig
+.lein
+.lesshst
+.m2
+.mnemosyne
+.mysql_history
+.org.eclipse.epp.usagedata.recording.userId
+.ssh
+.subversion
+.subversion_IDEA
+.vimbackup
+.viminfo
+.virtualenvs
+Desktop
+Development
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+VirtualBox VMs
+conf
+dotfiles
