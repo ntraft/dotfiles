@@ -1,5 +1,4 @@
 syntax: glob
-.DS_Store
 .CFUserTextEncoding
 .DS_Store
 .Trash
