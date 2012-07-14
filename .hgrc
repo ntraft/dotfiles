@@ -5,6 +5,7 @@ username = Neil Traft <ntraft@gmail.com>
 hgext.color =
 hgext.extdiff = 
 hgext.graphlog =
+hgext.fetch =
 
 [extdiff]
 cmd.diffy = fmdiff
