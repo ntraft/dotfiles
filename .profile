@@ -14,8 +14,8 @@ export PATH='/usr/local/bin':$PATH
 export PATH=$PATH:'/Developer/Tools:/Developer/usr/bin:/Developer/usr/sbin'
 
 # Setting the path for Android Tools.
-export PATH=$PATH:'/Developer/android-sdk/tools:/Developer/android-sdk/platform-tools'
-export PATH=$PATH:'/Developer/android-ndk:/Developer/android-ndk/tools'
+export PATH=$PATH:'/Users/ntraft/Development/android-sdk/tools:/Users/ntraft/Development/android-sdk/platform-tools'
+export PATH=$PATH:'/Users/ntraft/Development/android-ndk:/Users/ntraft/Development/android-ndk/tools'
 
 # Setting the path for Flex SDK command-line tools.
 export PATH=$PATH:'/Applications/Adobe Flex Builder 3/sdks/3.2.0/bin'
