@@ -31,6 +31,7 @@ syntax: glob
 .gnupg
 .idlerc
 .io_history
+.ipython
 .jline-clojure.main.history
 .lein
 .lesshst
@@ -43,6 +44,7 @@ syntax: glob
 .octave_hist
 .org.eclipse.epp.usagedata.recording.userId
 .parallels_settings
+.pip
 .profile
 .recently-used
 .recently-used.xbel
@@ -50,6 +52,7 @@ syntax: glob
 .repopickle_.gitconfig
 .sinan
 .smb
+.sqlite_history
 .ssh
 .subversion
 .subversion_IDEA
