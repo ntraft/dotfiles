@@ -11,4 +11,5 @@
 	co = checkout
 	di = diff
 	br = branch
+	aa = add --all
 
