@@ -32,6 +32,7 @@ syntax: glob
 .gnupg
 .idlerc
 .io_history
+.ipython
 .jline-clojure.main.history
 .lein
 .lesshst
@@ -52,6 +53,7 @@ syntax: glob
 .repopickle_.gitconfig
 .sinan
 .smb
+.sqlite_history
 .ssh
 .subversion
 .subversion_IDEA
