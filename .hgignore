@@ -17,6 +17,7 @@ syntax: glob
 .console_lock
 .cups
 .dropbox
+.dvdcss
 .eclipse
 .eclipse_keyring
 .emacs
@@ -43,6 +44,7 @@ syntax: glob
 .octave_hist
 .org.eclipse.epp.usagedata.recording.userId
 .parallels_settings
+.pip
 .profile
 .recently-used
 .recently-used.xbel
