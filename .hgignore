@@ -33,6 +33,7 @@ syntax: glob
 .idlerc
 .io_history
 .ipython
+.ivy2
 .jline-clojure.main.history
 .lein
 .lesshst
@@ -51,6 +52,8 @@ syntax: glob
 .recently-used.xbel
 .repoconfig
 .repopickle_.gitconfig
+.sbt
+.serverauth*
 .sinan
 .smb
 .sqlite_history
