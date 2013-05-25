@@ -23,6 +23,9 @@ export PATH=$PATH:'/Applications/Adobe Flex Builder 3/sdks/3.2.0/bin'
 # Setting the path for Erlang
 export PATH=$PATH:'/opt/local/lib/erlang/bin'
 
+# Configure the Python Path
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
 # Set Maven Home variable so it can be seen by IntelliJ and others
 export M2_HOME='/opt/local/share/java/maven3'
 
@@ -34,6 +37,9 @@ export CLICOLOR=true
 
 # Color the prompt
 export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 5)\]\w \[$(tput sgr0)\]$ "
+
+# Allow globs to expand hidden files
+shopt -s dotglob nullglob
 
 # Various aliases
 alias ls='ls -h'
