@@ -63,6 +63,9 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" --NTRAFT--
+set tabstop=4
+" --NTRAFT--
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
