@@ -6,16 +6,9 @@ export PATH='/opt/local/bin:/opt/local/sbin':$PATH
 # Prepend the Homebrew path so as to override built-ins.
 export PATH='/usr/local/bin':$PATH
 
-# Setting the path for XCode Dev Tools.  Man should be able to find the 
-# corresponding manpath automatically.
-export PATH=$PATH:'/Developer/Tools:/Developer/usr/bin:/Developer/usr/sbin'
-
 # Setting the path for Android Tools.
 export PATH=$PATH:'/Users/ntraft/Development/android-sdk/tools:/Users/ntraft/Development/android-sdk/platform-tools'
 export PATH=$PATH:'/Users/ntraft/Development/android-ndk:/Users/ntraft/Development/android-ndk/tools'
-
-# Setting the path for Flex SDK command-line tools.
-export PATH=$PATH:'/Applications/Adobe Flex Builder 3/sdks/3.2.0/bin'
 
 # Setting the path for Erlang
 export PATH=$PATH:'/opt/local/lib/erlang/bin'
@@ -31,12 +24,6 @@ export EDITOR='vim'
 
 # Enabling colorized output for programs which support it
 export CLICOLOR=true
-
-# Color the prompt
-export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 5)\]\w \[$(tput sgr0)\]$ "
-
-# Allow globs to expand hidden files
-shopt -s dotglob nullglob
 
 # Various aliases
 alias ls='ls -h'
