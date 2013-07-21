@@ -44,6 +44,7 @@ syntax: glob
 .mnemosyne
 .mysql_history
 .octave_hist
+.oh-my-zsh
 .org.eclipse.epp.usagedata.recording.userId
 .parallels_settings
 .pip
@@ -66,6 +67,9 @@ syntax: glob
 .viminfo
 .virtualenvs
 .xinitrc.old
+.zcompdump
+.zsh-update
+.zsh_history
 Applications
 Desktop
 Desktop DB
@@ -77,11 +81,13 @@ Dropbox
 Library
 Movies
 Music
+My Cubby
 Pictures
 Public
 Settings
 Sites
 VirtualBox VMs
 conf
+dnesbitt
 macports
 octave-core
