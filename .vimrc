@@ -34,6 +34,9 @@ set backupdir=~/.vimbackup
 set noswapfile
 set swapfile
 set dir=~/.vimbackup
+
+" Turn on line numbers in gutter
+set number
 " --NTRAFT--
 
 set history=50		" keep 50 lines of command line history
