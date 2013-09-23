@@ -11,6 +11,7 @@ syntax: glob
 .Xcode
 .accurev
 .android
+.anyconnect
 .bash_history
 .cache
 .config
