@@ -25,6 +25,9 @@ export EDITOR='vim'
 # Enabling colorized output for programs which support it
 export CLICOLOR=true
 
+# For gnuplot support in Octave.
+export GNUTERM=x11
+
 # Various aliases
 alias ls='ls -h'
 alias l='ls -hA'
