@@ -13,6 +13,11 @@ export PATH=$PATH:'/Users/ntraft/Development/android-ndk:/Users/ntraft/Developme
 # Setting the path for Erlang
 export PATH=$PATH:'/opt/local/lib/erlang/bin'
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Configure the Python Path
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
