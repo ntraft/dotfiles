@@ -7,7 +7,7 @@
 source ~/.profile
 
 # Allow globs to expand hidden files
-shopt -s dotglob nullglob
+shopt -s dotglob
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
