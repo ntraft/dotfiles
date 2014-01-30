@@ -13,3 +13,5 @@
 	br = branch
 	aa = add --all
 
+[push]
+	default = simple
