@@ -1,4 +1,6 @@
-.project
-.pydevproject
+# Mac
+.DS_Store
+
+# IntelliJ
 .idea/misc.xml
 .idea/workspace.xml
