@@ -18,8 +18,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Configure the Python Path
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+# Configure the Homebrew Python Path. Only needed if using Python bindings to a
+# brew-installed library from a NON-brew Python!
+#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # Set Maven Home variable so it can be seen by IntelliJ and others
 export M2_HOME='/opt/local/share/java/maven3'
