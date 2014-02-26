@@ -6,7 +6,7 @@
 [core]
 	excludesfile = /Users/ntraft/.gitignore
 [alias]
-	st = status
+	st = status -sb
 	ci = commit
 	co = checkout
 	di = diff
