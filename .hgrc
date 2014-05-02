@@ -1,5 +1,6 @@
 [ui]
 username = Neil Traft <ntraft@gmail.com>
+ssh = ssh -C
 
 [extensions]
 hgext.color =
