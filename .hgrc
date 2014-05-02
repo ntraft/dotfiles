@@ -6,6 +6,7 @@ hgext.color =
 hgext.extdiff = 
 hgext.graphlog =
 hgext.fetch =
+hgext.shelve = 
 
 [extdiff]
 cmd.diffy = fmdiff
