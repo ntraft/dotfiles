@@ -39,4 +39,6 @@ alias ls='ls -h'
 alias l='ls -hA'
 alias ll='ls -lhA'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
+alias apt='sudo apt-get'
+alias app='sudo apt-cache'
 
