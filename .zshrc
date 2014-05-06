@@ -57,4 +57,3 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git mercurial svn brew osx sublime macports pip python virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
