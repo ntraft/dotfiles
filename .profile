@@ -1,22 +1,26 @@
-# Prepend the MacPorts path so as to override built-ins.  Man should be able to
-# find the corresponding manpath automatically.
-export PATH='/opt/local/bin:/opt/local/sbin':$PATH
+# Provides functions for adding items to PATH.
+source .add2path
+
+# MacPorts paths.
+prepend2path '/opt/local/bin'
+prepend2path '/opt/local/sbin'
+# Man should be able to find the corresponding manpath automatically.
 #export MANPATH=$MANPATH:/opt/local/share/man
 
-# Prepend the Homebrew path so as to override built-ins.
-export PATH='/usr/local/bin':$PATH
+# Homebrew path. 
+prepend2path '/usr/local/bin'
 
-# Setting the path for Android Tools.
-export PATH=$PATH:'/Users/ntraft/Development/android-sdk/tools:/Users/ntraft/Development/android-sdk/platform-tools'
-export PATH=$PATH:'/Users/ntraft/Development/android-ndk:/Users/ntraft/Development/android-ndk/tools'
+# Path for Android Tools.
+append2path '/Users/ntraft/Development/android-sdk/tools'
+append2path '/Users/ntraft/Development/android-sdk/platform-tools'
+append2path '/Users/ntraft/Development/android-ndk'
+append2path '/Users/ntraft/Development/android-ndk/tools'
 
-# Setting the path for Erlang
-export PATH=$PATH:'/opt/local/lib/erlang/bin'
+# Path for Erlang.
+append2path '/opt/local/lib/erlang/bin'
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# Include user's private bin if it exists.
+prepend2path "$HOME/bin"
 
 # Configure the Homebrew Python Path. Only needed if using Python bindings to a
 # brew-installed library from a NON-brew Python!

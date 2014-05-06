@@ -1,0 +1,17 @@
+#!/bin/bash
+# Add a directory to the Unix path only if it exists.
+
+function prepend2path {
+	if [[ ! $1 == /* ]] ; then 1=/$1; fi
+	if [ -d $1 ]; then
+		export PATH=$1:$PATH
+	fi
+}
+
+function append2path {
+	if [[ ! $1 == /* ]] ; then 1=/$1; fi
+	if [ -d $1 ]; then
+		export PATH=$PATH:$1
+	fi
+}
+
