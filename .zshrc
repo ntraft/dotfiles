@@ -57,3 +57,5 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git mercurial svn brew osx sublime macports pip python virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
+# This needs to be here; even though oh-my-zsh RUNS this file, it does not SOURCE it.
+source .profile

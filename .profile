@@ -48,3 +48,7 @@ alias egrep='egrep --color=auto'
 alias apt='sudo apt-get'
 alias app='sudo apt-cache'
 
+if [ -f .localrc ]; then
+	source .localrc
+fi
+
