@@ -1,5 +1,5 @@
 # Provides functions for adding items to PATH.
-source .add2path
+source $HOME/.add2path
 
 # MacPorts paths.
 prepend2path '/opt/local/bin'
@@ -48,7 +48,7 @@ alias egrep='egrep --color=auto'
 alias apt='sudo apt-get'
 alias app='sudo apt-cache'
 
-if [ -f .localrc ]; then
-	source .localrc
+if [ -f $HOME/.localrc ]; then
+	source $HOME/.localrc
 fi
 
