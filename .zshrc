@@ -7,6 +7,8 @@ unsetopt beep
 bindkey -e
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
+bindkey '^j' backward-kill-line
+bindkey '^d' kill-word
 
 zstyle :compinstall filename '/home/ntraft/.zshrc'
 autoload -Uz compinit
