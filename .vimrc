@@ -69,6 +69,9 @@ endif
 " --NTRAFT--
 set tabstop=4
 
+" Adds line and column number to status bar.
+set ruler
+
 " Turns off search highlighting when you hit enter.
 nnoremap <CR> :noh<CR><CR>
 
