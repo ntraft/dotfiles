@@ -68,7 +68,23 @@ endif
 
 " --NTRAFT--
 set tabstop=4
+
+" Turns off search highlighting when you hit enter.
+nnoremap <CR> :noh<CR><CR>
+
+" Use semicolon instead of colon
+map ; :
+
+" Toggle paste mode, which fixes Vim's retarded newline behavior.
+set pastetoggle=<F2>
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 " --NTRAFT--
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
