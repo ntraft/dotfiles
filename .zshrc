@@ -59,5 +59,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git mercurial svn brew osx sublime macports pip python virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
+
+# Don't show variable names instead of directory names.
+# This needs to be EXACTLY here between these two calls: the above call turns
+# it on but we don't want it to create dir names in the below call.
+unsetopt autonamedirs
+
 # This needs to be here; even though oh-my-zsh RUNS this file, it does not SOURCE it.
 source $HOME/.profile
