@@ -1,6 +1,20 @@
 # Provides functions for adding items to PATH.
 source $HOME/.add2path
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	DEVDIR='/home/ntraft/Development'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	DEVDIR='/Users/ntraft/Development'
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+	DEVDIR='/Users/ntraft/Development'
+elif [[ "$OSTYPE" == "win32" ]]; then
+	# Do nothing.
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+	# Do nothing.
+else
+	# Unknown platform.
+fi
+
 # MacPorts paths.
 prepend2path '/opt/local/bin'
 prepend2path '/opt/local/sbin'
@@ -11,10 +25,10 @@ prepend2path '/opt/local/sbin'
 prepend2path '/usr/local/bin'
 
 # Path for Android Tools.
-append2path '/Users/ntraft/Development/android-sdk/tools'
-append2path '/Users/ntraft/Development/android-sdk/platform-tools'
-append2path '/Users/ntraft/Development/android-ndk'
-append2path '/Users/ntraft/Development/android-ndk/tools'
+append2path $DEVDIR'/android-sdk/tools'
+append2path $DEVDIR'/android-sdk/platform-tools'
+append2path $DEVDIR'/android-ndk'
+append2path $DEVDIR'/android-ndk/tools'
 
 # Path for Erlang.
 append2path '/opt/local/lib/erlang/bin'
