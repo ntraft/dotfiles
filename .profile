@@ -1,19 +1,11 @@
 # Provides functions for adding items to PATH.
-source $HOME/.add2path
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	DEVDIR='/home/ntraft/Development'
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-	DEVDIR='/Users/ntraft/Development'
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-	DEVDIR='/Users/ntraft/Development'
-elif [[ "$OSTYPE" == "win32" ]]; then
-	# Do nothing.
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-	# Do nothing.
-else
-	# Unknown platform.
+if [ -f $HOME/.add2path ]; then
+	source $HOME/.add2path
 fi
+
+# My dev directory is always here.
+DEVDIR=$HOME/Development
+
 
 # MacPorts paths.
 prepend2path '/opt/local/bin'
@@ -38,6 +30,8 @@ prepend2path "$HOME/bin"
 
 # Configure the Homebrew Python Path. Only needed if using Python bindings to a
 # brew-installed library from a NON-brew Python!
+# In fact, I think even in the above case this is no longer advised. I read that
+# there is a config file you can modify instead.
 #export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # Set Maven Home variable so it can be seen by IntelliJ and others
