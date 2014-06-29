@@ -46,6 +46,11 @@ export CLICOLOR=true
 # For gnuplot support in Octave.
 export GNUTERM=x11
 
+# Options for less.
+# -R allows me to pump colorized output from grep into less, and maintain the ANSI colour sequences.
+# -i gives case-insensitive searches. (Can be toggled when in less, by typing -i.)
+LESS=-Ri
+
 # Various aliases
 alias ls='ls --color=auto -h'
 alias l='ls --color=auto -hA'
