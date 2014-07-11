@@ -68,6 +68,7 @@ endif
 
 " --NTRAFT--
 set tabstop=4
+set shiftwidth=4
 
 " Adds line and column number to status bar.
 set ruler
