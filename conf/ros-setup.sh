@@ -1,3 +1,19 @@
+# HOW IT WORKS
+# 
+# 1. Place this file somewhere and source it from within your .bashrc (or
+#    your .zshrc). If you place it in your home directory, you would write:
+#        source $HOME/ros-setup.sh
+# 2. Any time you want to work on a different distro, just select it:
+#        $ rosselect hydro
+#        $ rosselect groovy
+#        $ rosselect /path/to/groovy
+#    Your current shell AND ALL SUBSEQUENT SHELLS will be placed in the
+#    selected environemnt. No more need to edit your .bashrc!
+# 3. You can even use this to work in a specific workspace. No more need to
+#    manually source the setup files!
+#        $ rosselect /path/to/rosbuild_ws
+#        $ rosselect /path/to/catkin_ws
+# 
 
 # This function can be used to switch between distros and workspaces.
 function rosselect {
