@@ -34,6 +34,10 @@ function rossetup {
 		echo "Using ROS distro at: $ROSDIR"
 	fi
 
+	# This sometimes causes problems when switching between different distros.
+	unset LD_LIBRARY_PATH
+	# Let's also squelch the warning message.
+	unset ROS_DISTRO
 	# Now call the actual setup script.
 	if [ -n "$ZSH_VERSION" ]; then
 		source $ROSDIR/setup.zsh
