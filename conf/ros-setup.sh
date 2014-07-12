@@ -27,9 +27,9 @@ function rosselect {
 		findros && rosstatus && unset ROSDIR
 		return 0
 	elif [[ -d $1 && -f $1/setup.sh ]]; then
-		echo $1 > $HOME/.rosdir
+		echo `abspath $1` > $HOME/.rosdir
 	elif [[ -d $1 && -d $1/devel && -f $1/devel/setup.sh ]]; then
-		echo $1/devel > $HOME/.rosdir
+		echo `abspath $1/devel` > $HOME/.rosdir
 	elif [[ -d /opt/ros/$1 && -f /opt/ros/$1/setup.sh ]]; then
 		echo /opt/ros/$1 > $HOME/.rosdir
 	else
@@ -37,6 +37,10 @@ function rosselect {
 		return 1
 	fi
 	rossetup
+}
+
+function abspath {
+	if [ -d "$1" ]; then echo `cd $1; pwd`; fi
 }
 
 # Grab the preferred ROS distribution, or fallback to a default.
