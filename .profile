@@ -52,9 +52,9 @@ export GNUTERM=x11
 LESS=-Ri
 
 # Various aliases
-alias ls='ls --color=auto -h'
-alias l='ls --color=auto -hA'
-alias ll='ls --color=auto -lhA'
+alias ls='ls -h'
+alias l='ls -hA'
+alias ll='ls -lhA'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
