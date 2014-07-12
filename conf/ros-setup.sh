@@ -18,7 +18,8 @@
 #    manually source the setup files!
 #        $ rosselect /path/to/rosbuild_ws
 #        $ rosselect /path/to/catkin_ws
-# 4. Basically, it works for any directory that contains a setup.sh script.
+# 4. Basically, it works for any directory that contains a setup.sh script. It
+#    handles relative paths as well as absolute paths.
 # 
 
 # This function can be used to switch between distros and workspaces.
