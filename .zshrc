@@ -1,7 +1,4 @@
 # Some stuff for zsh even without oh-my-zsh
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 setopt extendedglob notify
 unsetopt beep
 bindkey -e
@@ -13,6 +10,9 @@ bindkey '^d' kill-word
 zstyle :compinstall filename '/home/ntraft/.zshrc'
 autoload -Uz compinit
 compinit
+
+# Apparently need this here for oh-my-zsh to use the correct python.
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
