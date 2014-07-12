@@ -59,7 +59,7 @@ alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias apt='sudo apt-get'
-alias app='sudo apt-cache'
+alias app='apt-cache'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
 

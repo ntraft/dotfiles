@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Neil subscriptions in Google Reader</title>
+    </head>
+    <body>
+        <outline text="AIDP Blog" title="AIDP Blog" type="rss"
+            xmlUrl="http://aidpblog.org/feed/atom/" htmlUrl="http://aidpblog.org"/>
+        <outline text="Allrecipes Daily Recipes for Healthy Living"
+            title="Allrecipes Daily Recipes for Healthy Living"
+            type="rss"
+            xmlUrl="http://rss.allrecipes.com/daily.aspx?hubID=84" htmlUrl="http://allrecipes.com/Recipes/Healthy-Living/Daily.aspx"/>
+        <outline text="Apple Support - Most Recent Mac OS X Articles"
+            title="Apple Support - Most Recent Mac OS X Articles"
+            type="rss"
+            xmlUrl="http://docs.info.apple.com/rss/macosx.rss" htmlUrl="http://www.apple.com/support/"/>
+        <outline text="BBC News | Most Popular Stories | World Edition"
+            title="BBC News | Most Popular Stories | World Edition"
+            type="rss"
+            xmlUrl="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/livestats/most_read/rss.xml" htmlUrl="http://news.bbc.co.uk/go/rss/-/1/shared/bsp/hi/live_stats/html/map.stm"/>
+        <outline text="CNET News.com" title="CNET News.com" type="rss"
+            xmlUrl="http://news.com.com/2547-1_3-0-5.xml" htmlUrl="http://www.news.com/"/>
+        <outline text="Discovery News - Technology"
+            title="Discovery News - Technology" type="rss"
+            xmlUrl="http://dsc.discovery.com/news/subjects/technology/xdb/topstories.xml" htmlUrl="http://dsc.discovery.com/news/news.html"/>
+        <outline text="DZone: latest front page"
+            title="DZone: latest front page" type="rss"
+            xmlUrl="http://feeds.dzone.com/dzone/frontpage" htmlUrl="http://www.dzone.com/links/"/>
+        <outline text="Eclipse News" title="Eclipse News" type="rss"
+            xmlUrl="http://www.eclipse.org/eclipsenews.rss" htmlUrl="http://www.eclipse.org"/>
+        <outline text="Engadget" title="Engadget" type="rss"
+            xmlUrl="http://www.engadget.com/rss.xml" htmlUrl="http://www.engadget.com"/>
+        <outline text="John Higgins Retires"
+            title="John Higgins Retires" type="rss"
+            xmlUrl="http://higginsretirement.blogspot.com/feeds/posts/default" htmlUrl="http://higginsretirement.blogspot.com/"/>
+        <outline text="Jonathan Schwartz's Blog"
+            title="Jonathan Schwartz's Blog" type="rss"
+            xmlUrl="http://blogs.sun.com/jonathan/feed/entries/atom" htmlUrl="http://blogs.sun.com/jonathan/"/>
+        <outline text="Lifehacker" title="Lifehacker" type="rss"
+            xmlUrl="http://feeds.gawker.com/lifehacker/full" htmlUrl="http://lifehacker.com"/>
+        <outline text="Mac DevCenter" title="Mac DevCenter" type="rss"
+            xmlUrl="http://www.oreillynet.com/pub/feed/3" htmlUrl="http://www.macdevcenter.com/"/>
+        <outline text="Nerd Wisdom" title="Nerd Wisdom" type="rss"
+            xmlUrl="http://nerdwisdom.com/feed/" htmlUrl="http://nerdwisdom.com"/>
+        <outline text="News.com Extra" title="News.com Extra" type="rss"
+            xmlUrl="http://www.news.com/8300-9373_3-55.xml" htmlUrl="http://www.news.com/8300-1_3-55.html"/>
+        <outline text="NPR Topics: World" title="NPR Topics: World"
+            type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1004" htmlUrl="http://www.npr.org/templates/topics/topic.php?topicId=1004&amp;ft=1&amp;f=1004"/>
+        <outline text="Official google.org Blog"
+            title="Official google.org Blog" type="rss"
+            xmlUrl="http://feeds.feedburner.com/OfficialGoogleorgBlog" htmlUrl="http://blog.google.org/"/>
+        <outline text="PCWorld.com - Latest PC World News Stories"
+            title="PCWorld.com - Latest PC World News Stories"
+            type="rss" xmlUrl="http://rss.pcworld.com/rss/pcwnews.rss" htmlUrl="http://www.pcworld.com"/>
+        <outline text="PopSci.com" title="PopSci.com" type="rss"
+            xmlUrl="http://feeds.feedburner.com/popularscience" htmlUrl="http://www.popsci.com"/>
+        <outline text="Reason Magazine - Hit &amp; Run"
+            title="Reason Magazine - Hit &amp; Run" type="rss"
+            xmlUrl="http://feeds.feedburner.com/reason/HitandRun" htmlUrl="http://www.reason.com/blog"/>
+        <outline
+            text="Reason Magazine - Topics > 2008 Presidential Candidates"
+            title="Reason Magazine - Topics > 2008 Presidential Candidates"
+            type="rss" xmlUrl="http://reason.com/topics/topic/275.xml" htmlUrl="http://www.reason.com/topics"/>
+        <outline text="Robot Central" title="Robot Central" type="rss"
+            xmlUrl="http://feeds.feedburner.com/RobotCentral" htmlUrl="http://robotcentral.com"/>
+        <outline text="ScienceNOW" title="ScienceNOW" type="rss"
+            xmlUrl="http://sciencenow.sciencemag.org/rss/current.xml" htmlUrl="http://sciencenow.sciencemag.org/"/>
+        <outline text="SFLC News Releases" title="SFLC News Releases"
+            type="rss"
+            xmlUrl="http://www.softwarefreedom.org/feeds/news/" htmlUrl="http://www.softwarefreedom.org/news/"/>
+        <outline text="The Open Road" title="The Open Road" type="rss"
+            xmlUrl="http://blogs.cnet.com/8300-13505_1-16.xml" htmlUrl="http://blogs.cnet.com/8300-13505_1-16.html"/>
+        <outline text="Tom's Hardware" title="Tom's Hardware" type="rss"
+            xmlUrl="http://www.tomshardware.com/articles.xml" htmlUrl="http://www.tomshardware.com/"/>
+        <outline text="Twitter / BarackObama"
+            title="Twitter / BarackObama" type="rss"
+            xmlUrl="http://twitter.com/statuses/user_timeline/813286.atom" htmlUrl="http://twitter.com/BarackObama"/>
+        <outline text="Wired Top Stories" title="Wired Top Stories"
+            type="rss"
+            xmlUrl="http://www.wired.com/news/feeds/rss2/0,2610,,00.xml" htmlUrl="http://www.wired.com/rss/index.xml"/>
+        <outline text="XML Aficionado" title="XML Aficionado" type="rss"
+            xmlUrl="http://feeds.feedburner.com/XmlAficionado" htmlUrl="http://www.xmlaficionado.com/"/>
+    </body>
+</opml>
