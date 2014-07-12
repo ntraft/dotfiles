@@ -1,3 +1,6 @@
+# ros-setup.sh: Easily change your current ROS environment without needing to
+# edit your .bashrc! Tested with both bash and zsh.
+#
 # HOW IT WORKS
 # 
 # 1. Place this file somewhere and source it from within your .bashrc (or
@@ -13,12 +16,15 @@
 #    manually source the setup files!
 #        $ rosselect /path/to/rosbuild_ws
 #        $ rosselect /path/to/catkin_ws
+# 4. Basically, it works for any directory that contains a setup.sh script.
 # 
 
 # This function can be used to switch between distros and workspaces.
 function rosselect {
 	if [[ -d $1 && -f $1/setup.sh ]]; then
 		echo $1 > $HOME/.rosdir
+	elif [[ -d $1 && -d $1/devel && -f $1/devel/setup.sh ]]; then
+		echo $1/devel > $HOME/.rosdir
 	elif [[ -d /opt/ros/$1 && -f /opt/ros/$1/setup.sh ]]; then
 		echo /opt/ros/$1 > $HOME/.rosdir
 	else
