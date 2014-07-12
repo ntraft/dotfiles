@@ -1,5 +1,7 @@
 # ros-setup.sh: Easily change your current ROS environment without needing to
-# edit your .bashrc! Tested with both bash and zsh.
+# edit your .bashrc!
+# 
+# Tested with both bash and zsh. Not likely to work with other shells.
 #
 # HOW IT WORKS
 # 
@@ -22,8 +24,8 @@
 # This function can be used to switch between distros and workspaces.
 function rosselect {
 	if [ ! -n "$1" ]; then
-		echo "distro is null"
-		return 1
+		findros && rosstatus && unset ROSDIR
+		return 0
 	elif [[ -d $1 && -f $1/setup.sh ]]; then
 		echo $1 > $HOME/.rosdir
 	elif [[ -d $1 && -d $1/devel && -f $1/devel/setup.sh ]]; then
@@ -37,9 +39,8 @@ function rosselect {
 	rossetup
 }
 
-# This function actually sources the setup file for the current distro.
-function rossetup {
-	# Grab the preferred ROS distribution, or fallback to a default.
+# Grab the preferred ROS distribution, or fallback to a default.
+function findros {
 	if [ -f $HOME/.rosdir ]; then
 		ROSDIR=`cat $HOME/.rosdir`
 	else
@@ -50,14 +51,22 @@ function rossetup {
 			fi
 		done
 	fi
+}
 
-	# Did we find any ROS?
+# Did we find any ROS?
+function rosstatus {
 	if [ ! -d "$ROSDIR" ]; then
 		echo "No ROS distribution found."
+		unset ROSDIR
 		return 1
 	else
 		echo "Using ROS distro at: $ROSDIR"
 	fi
+}
+
+# This function actually sources the setup file for the current distro.
+function rossetup {
+	findros && rosstatus || return 1
 
 	# This sometimes causes problems when switching between different distros.
 	unset LD_LIBRARY_PATH
@@ -71,6 +80,8 @@ function rossetup {
 	else
 		source $ROSDIR/setup.sh
 	fi
+
+	unset ROSDIR
 }
 
 rossetup
