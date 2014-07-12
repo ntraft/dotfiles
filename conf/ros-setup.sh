@@ -21,7 +21,10 @@
 
 # This function can be used to switch between distros and workspaces.
 function rosselect {
-	if [[ -d $1 && -f $1/setup.sh ]]; then
+	if [ ! -n "$1" ]; then
+		echo "distro is null"
+		return 1
+	elif [[ -d $1 && -f $1/setup.sh ]]; then
 		echo $1 > $HOME/.rosdir
 	elif [[ -d $1 && -d $1/devel && -f $1/devel/setup.sh ]]; then
 		echo $1/devel > $HOME/.rosdir
@@ -29,7 +32,7 @@ function rosselect {
 		echo /opt/ros/$1 > $HOME/.rosdir
 	else
 		echo "$1 setup files not found."
-		exit 1
+		return 1
 	fi
 	rossetup
 }
