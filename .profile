@@ -52,7 +52,12 @@ export GNUTERM=x11
 LESS=-Ri
 
 # Various aliases
-alias ls='ls --color=auto -h'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# OS X ls doesn't have the --color option (and doesn't need it).
+	alias ls='ls -h'
+else
+	alias ls='ls --color=auto -h'
+fi
 alias l='ls -A'
 alias ll='l -l'
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'

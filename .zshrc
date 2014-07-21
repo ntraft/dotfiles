@@ -11,8 +11,10 @@ zstyle :compinstall filename '/home/ntraft/.zshrc'
 autoload -Uz compinit
 compinit
 
-# Apparently need this here for oh-my-zsh to use the correct python.
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+# Use the Homebrew python on OS X.
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
