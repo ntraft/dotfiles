@@ -12,7 +12,7 @@ autoload -Uz compinit
 compinit
 
 # Apparently need this here for oh-my-zsh to use the correct python.
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
