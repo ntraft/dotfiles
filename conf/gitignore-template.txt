@@ -1,7 +1,10 @@
-# ROS build folders
+# ROS Catkin build folders
 build/
 bin/
 devel/
+# Rosbuild workspace files
+setup*sh
+.rosinstall*
 
 # For stupid goddamn LaTeX files
 *.aux
