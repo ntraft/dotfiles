@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Sublime Text
+Type=Application
+Exec=subl %F
+Terminal=false
+Icon=sublime
+Comment=Sublime Text is a sophisticated text editor for code, markup and prose.
+NoDisplay=false
+Categories=Development;IDE;TextEditor;
+Name[en]=Sublime Text
