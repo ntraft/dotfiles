@@ -6,6 +6,13 @@ bindkey ";5D" backward-word
 bindkey ";5C" forward-word
 bindkey '^j' backward-kill-line
 bindkey '^d' kill-word
+# Explicitly bind shift+tab to file completion. Zsh tries to search for
+# completion candidates only within your current context, but sometimes YOU
+# JUST WANT TO COMPLETE A FILENAME. Shift-tab will force it into a typical
+# filename completion.
+zle -C complete complete-word complete-files
+bindkey '^[[Z' complete
+complete-files () { compadd - $PREFIX* }
 
 zstyle :compinstall filename '/home/ntraft/.zshrc'
 autoload -Uz compinit
