@@ -69,6 +69,11 @@ function rosstatus {
 	fi
 }
 
+# Convenience function because I'm so sick of typing this.
+function rospath {
+	echo $ROS_PACKAGE_PATH
+}
+
 # This function actually sources the setup file for the current distro.
 function rossetup {
 	findros && rosstatus || return 1
