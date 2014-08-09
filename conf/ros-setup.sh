@@ -74,6 +74,11 @@ function rospath {
 	echo $ROS_PACKAGE_PATH
 }
 
+# Convenience function because I'm so sick of typing this.
+function rosenv {
+	export | grep -i --color=never ros
+}
+
 # This function actually sources the setup file for the current distro.
 function rossetup {
 	findros && rosstatus || return 1
