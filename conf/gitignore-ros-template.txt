@@ -5,6 +5,13 @@ devel/
 # Rosbuild workspace files
 setup*sh
 .rosinstall*
+# Some other ROS auto-generated folders
+lib/
+msg_gen/
+srv_gen/
+# dynamic_reconfigure auto-generated files
+*.cfgc
+cfg/cpp/
 
 # CMake files
 CMakeCache.txt
