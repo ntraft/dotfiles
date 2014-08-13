@@ -37,6 +37,9 @@ cmake_install.cmake
 .pydevproject
 .settings
 
+# Sublime project files
+*.sublime-project*
+
 # Compiled Object files
 *.slo
 *.lo

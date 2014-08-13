@@ -17,6 +17,9 @@
 .pydevproject
 .settings
 
+# Sublime project files
+*.sublime-project*
+
 # CMake files
 CMakeCache.txt
 CMakeFiles
