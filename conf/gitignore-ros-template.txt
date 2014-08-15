@@ -9,6 +9,9 @@ setup*sh
 lib/
 msg_gen/
 srv_gen/
+catkin/
+catkin_generated/
+gtest/
 # dynamic_reconfigure auto-generated files
 *.cfgc
 cfg/cpp/
