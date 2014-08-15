@@ -18,8 +18,14 @@
 #    manually source the setup files!
 #        $ rosselect /path/to/rosbuild_ws
 #        $ rosselect /path/to/catkin_ws
-# 4. Basically, it works for any directory that contains a setup.sh script. It
-#    handles relative paths as well as absolute paths.
+# 
+# Basically, it works for any directory that contains a setup.sh script. It
+# handles relative paths as well as absolute paths.
+# 
+# A couple other convenience functions are also included:
+# 	* rospath: Displays the current ROS_PACKAGE_PATH.
+#   * rosenv: Displays all the ros-related environment variables.
+# These are pretty useful for verifying that your ROS environment is correct.
 # 
 
 # This function can be used to switch between distros and workspaces.
