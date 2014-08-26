@@ -1,23 +1,3 @@
-# Some stuff for zsh even without oh-my-zsh
-setopt extendedglob notify
-unsetopt beep
-bindkey -e
-bindkey ";5D" backward-word
-bindkey ";5C" forward-word
-bindkey '^j' backward-kill-line
-bindkey '^d' kill-word
-# Explicitly bind shift+tab to file completion. Zsh tries to search for
-# completion candidates only within your current context, but sometimes YOU
-# JUST WANT TO COMPLETE A FILENAME. Shift-tab will force it into a typical
-# filename completion.
-zle -C complete complete-word complete-files
-bindkey '^[[Z' complete
-complete-files () { compadd - $PREFIX* }
-
-zstyle :compinstall filename '/home/ntraft/.zshrc'
-autoload -Uz compinit
-compinit
-
 # Use the Homebrew python on OS X.
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
@@ -88,6 +68,27 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Some stuff for zsh even without oh-my-zsh
+setopt extendedglob notify
+unsetopt beep
+bindkey -e
+bindkey ";5D" backward-word
+bindkey ";5C" forward-word
+bindkey '^j' backward-kill-line
+bindkey '^d' kill-word
+
+zstyle :compinstall filename '/home/ntraft/.zshrc'
+autoload -Uz compinit
+compinit
+
+# Explicitly bind shift+tab to file completion. Zsh tries to search for
+# completion candidates only within your current context, but sometimes YOU
+# JUST WANT TO COMPLETE A FILENAME. Shift-tab will force it into a typical
+# filename completion.
+zle -C complete complete-word complete-files
+bindkey '^[[Z' complete
+complete-files () { compadd - $PREFIX* }
 
 # Don't show variable names instead of directory names.
 # This needs to be EXACTLY here after sourcing oh-my-zsh but before sourcing
