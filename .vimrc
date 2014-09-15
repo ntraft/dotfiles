@@ -87,6 +87,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Allows writing to files with root privileges
+cmap w!! w !sudo tee % > /dev/null
 " --NTRAFT--
 
 " Only do this part when compiled with support for autocommands.
