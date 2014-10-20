@@ -1,16 +1,3 @@
-# ROS build folders
-build/
-bin/
-devel/
-
-# For stupid goddamn LaTeX files
-*.aux
-*.synctex.gz
-*.log
-*.out
-*.bbl
-*.blg
-
 # Backup/Autosave files
 *~
 *.asv
@@ -53,5 +40,14 @@ CMakeFiles
 Makefile
 cmake_install.cmake
 
+# For stupid goddamn LaTeX files
+*.aux
+*.synctex.gz
+*.log
+*.out
+*.bbl
+*.blg
+
 # Other VCS files
 .svn/
+.hg/
