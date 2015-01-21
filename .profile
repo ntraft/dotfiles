@@ -55,6 +55,9 @@ export CLICOLOR=true
 # For gnuplot support in Octave.
 export GNUTERM=x11
 
+# Adds auto-complete and history keeping to Python interpreter.
+export PYTHONSTARTUP=$HOME/.pystartup
+
 # Options for less.
 # -R allows me to pump colorized output from grep into less, and maintain the ANSI colour sequences.
 # -i gives case-insensitive searches. (Can be toggled when in less, by typing -i.)
