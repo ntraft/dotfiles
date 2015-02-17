@@ -121,6 +121,7 @@ if has("autocmd")
   augroup END
 
   " Set custom filetypes.
+  autocmd BufNewFile,BufRead *.launch set filetype=xml
   autocmd BufNewFile,BufRead *.world set filetype=xml
 
 else
