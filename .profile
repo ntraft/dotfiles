@@ -63,6 +63,9 @@ export PYTHONSTARTUP=$HOME/.pystartup
 # -i gives case-insensitive searches. (Can be toggled when in less, by typing -i.)
 LESS=-Ri
 
+# A convenient function for swapping files.
+function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
+
 # Various aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# OS X ls doesn't have the --color option (and doesn't need it).
