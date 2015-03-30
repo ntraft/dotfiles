@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=RViz
+Type=Application
+Exec=rviz
+Terminal=false
+Icon=rviz
+Comment=RViz is a 3D visualization tool for ROS.
+NoDisplay=false
+Categories=Development;Graphics;3DGraphics;Education;Science;DataVisualization;Robotics;
+Name[en]=RViz
