@@ -20,7 +20,8 @@
 #        $ rosselect /path/to/catkin_ws
 # 
 # Basically, it works for any directory that contains a setup.sh script. It
-# handles relative paths as well as absolute paths.
+# handles relative paths as well as absolute paths. It also sets it up so
+# that `roscd` (no arguments) will bring you to your workspace.
 # 
 # A couple other convenience functions are also included:
 # 	* rospath: Displays the current ROS_PACKAGE_PATH.
@@ -100,6 +101,13 @@ function rossetup {
 		source $ROSDIR/setup.bash
 	else
 		source $ROSDIR/setup.sh
+	fi
+	# This is needed for roscd to work and Catkin workspaces leave it
+	# unset by default. That's dumb.
+	if [[ $ROSDIR == */devel ]]; then
+		export ROS_WORKSPACE=${ROSDIR%/*}
+	else
+		export ROS_WORKSPACE=$ROSDIR
 	fi
 
 	unset ROSDIR
