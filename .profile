@@ -64,7 +64,7 @@ export PYTHONSTARTUP=$HOME/.pystartup
 LESS=-Ri
 
 # A convenient function for swapping files.
-function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
+#function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
 
 # Various aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
