@@ -17,6 +17,15 @@
 .pydevproject
 .settings
 
+# Sublime project files
+*.sublime-project*
+
+# CMake files
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+
 # Common build target folders
 out/
 target/
@@ -38,12 +47,6 @@ bin/
 
 # Compiled Python files
 *.pyc
-
-# CMake files
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
 
 # For stupid goddamn LaTeX files
 *.aux

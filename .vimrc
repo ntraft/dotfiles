@@ -123,6 +123,7 @@ if has("autocmd")
   " Set custom filetypes.
   autocmd BufNewFile,BufRead *.launch set filetype=xml
   autocmd BufNewFile,BufRead *.world set filetype=xml
+  autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 else
 
