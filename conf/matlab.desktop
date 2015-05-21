@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Icon=matlab
-Name=Matlab
+Name=MATLAB
 Comment=MATLAB® is a high-level language and interactive environment for numerical computation, visualization, and programming.
 Exec=matlab -desktop
 Terminal=false
@@ -10,10 +10,10 @@ Categories=Development;Education;Science;DataVisualization;
 MimeType=text/x-matlab;
 StartupNotify=true
 StartupWMClass=sun-awt-X11-XFramePeer
-X-Ayatana-Desktop-Shortcuts=New_Window;
+X-Ayatana-Desktop-Shortcuts=X-Window;
 
 Name[en_US]=MATLAB
 
-[New_Window Shortcut Group]
-Name=start a new MATLAB instance
+[X-Window Shortcut Group]
+Name=Start a New MATLAB Instance
 Exec=matlab -desktop
