@@ -72,6 +72,9 @@ fi
 # Some stuff for zsh even without oh-my-zsh
 setopt extendedglob notify
 unsetopt beep
+# Don't return error when no glob match can be made; just run the
+# command anyway. This is the way bash works.
+unsetopt nomatch
 bindkey -e
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
