@@ -89,6 +89,10 @@ alias gdiff='git diff --no-index'
 alias path='echo $PATH | tr -s ":" "\n"'
 alias manpath='echo $MANPATH | tr -s ":" "\n"'
 
+if command -v keychain >/dev/null 2>&1; then
+	eval `keychain --eval id_rsa`
+fi
+
 if [ -f $HOME/.localrc ]; then
 	source $HOME/.localrc
 fi
