@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=CLion
+Type=Application
+Exec=clion
+Terminal=false
+Icon=clion
+Comment=A powerful IDE for C and C++.
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=CLion
