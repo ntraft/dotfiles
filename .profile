@@ -17,7 +17,7 @@ prepend2path '/opt/local/sbin'
 prepend2path '/usr/local/bin'
 
 # Support for ccache compiler and icecream.
-append2path '/usr/lib/ccache'
+prepend2path '/usr/lib/ccache'
 export CCACHE_PREFIX=icecc
 
 # Path for Android Tools.
