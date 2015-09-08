@@ -16,6 +16,10 @@ prepend2path '/opt/local/sbin'
 # Homebrew path. 
 prepend2path '/usr/local/bin'
 
+# Support for ccache compiler and icecream.
+append2path '/usr/lib/ccache'
+export CCACHE_PREFIX=icecc
+
 # Path for Android Tools.
 append2path $DEVDIR'/android-sdk/tools'
 append2path $DEVDIR'/android-sdk/platform-tools'
