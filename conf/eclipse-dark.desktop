@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Eclipse 
+Type=Application
+Exec=env LIBOVERLAY_SCROLLBAR=1 SWT_GTK3=0 UBUNTU_MENUPROXY=0 eclipse
+Terminal=false
+Icon=eclipse
+Comment=Eclipse is an integrated development environment.
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse
+X-Desktop-File-Install-Version=0.22
