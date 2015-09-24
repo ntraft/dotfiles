@@ -10,8 +10,8 @@
 	ci = commit
 	co = checkout
 	di = diff
-	diffc = diff --cached
 	dic = diff --cached
+	din = diff --no-index
 	br = branch
 	aa = add --all
 	au = add -u
