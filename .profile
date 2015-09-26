@@ -87,6 +87,7 @@ alias app='apt-cache'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
 alias gdiff='git diff --no-index'
+alias gpull='git stash && git pull --rebase && git stash pop'
 
 # Set up aliases to list paths vertically, element by element, rather than
 # horizontally across the screen. 
