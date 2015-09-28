@@ -79,14 +79,15 @@ else
 fi
 alias l='ls -A'
 alias ll='l -l'
-alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep='GREP_COLOR="1;33" LANG=C egrep --color=auto'
+alias fgrep='GREP_COLOR="1;33" LANG=C fgrep --color=auto'
+alias egrep='GREP_COLOR="1;33" LANG=C egrep --color=auto'
 alias apt='sudo apt-get'
 alias app='apt-cache'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
 alias gdiff='git diff --no-index'
+alias gpull='git stash && git pull --rebase && git stash pop'
 
 # Set up aliases to list paths vertically, element by element, rather than
 # horizontally across the screen. 
