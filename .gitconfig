@@ -17,8 +17,11 @@
 	aa = add --all
 	au = add -u
 	sh = show --name-status
+	# Graphical git log
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --all
+	# Detailed view of branches by age
+	bl=for-each-ref --sort=-committerdate --format='%(color:red)%(objectname:short) %(color:green)%(committerdate:relative) %(color:reset)%(refname:short) %(color:blue)%(authorname)' refs/heads/
 [push]
 	default = upstream
 [pull]
@@ -26,3 +29,4 @@
 [merge]
 	defaultToUpstream = true
 	conflictstyle = diff3
+	tool = meld
