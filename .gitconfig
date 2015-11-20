@@ -14,6 +14,7 @@
 	dic = diff --cached
 	din = diff --no-index
 	br = branch
+	bv = branch -vv
 	aa = add --all
 	au = add -u
 	sh = show --name-status
