@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SmartGit
+Type=Application
+Exec=smartgit
+Terminal=false
+Icon=smartgit
+Comment=A GUI for Git.
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=SmartGit
