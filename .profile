@@ -86,8 +86,14 @@ alias apt='sudo apt-get'
 alias app='apt-cache'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
-alias gdiff='git diff --no-index'
+#alias gdiff='git diff --no-index'
 alias gpull='git stash && git pull --rebase && git stash pop'
+
+# Make this a function instead of an alias so that oh-my-zsh is forced to
+# do filename completions normally.
+gdiff() {
+    git diff --no-index "$@"
+}
 
 # Set up aliases to list paths vertically, element by element, rather than
 # horizontally across the screen. 
