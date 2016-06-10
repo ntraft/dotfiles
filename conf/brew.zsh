@@ -2,7 +2,7 @@
 
 # If brew isn't installed install it
 if [ ! -e "$(which brew)" ]; then
-	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Make sure we’re using the latest Homebrew
@@ -35,12 +35,12 @@ function installcask() {
 # installcask alfred
 # installcask app-cleaner
 # installcask intellij-ultimate
-# installcask istat-menus
-# installcask sublime-text
-# installcask google-chrome
+installcask istat-menus
+installcask sublime-text
+installcask google-chrome
 installcask transmission
 installcask dropbox
-# installcask evernote
+installcask evernote
 installcask vlc
 installcask skype
 installcask firefox
