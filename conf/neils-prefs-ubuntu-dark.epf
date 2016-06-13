@@ -15,6 +15,8 @@
 /instance/org.eclipse.wst.internet.cache/TerminalPrefInvertColors=true
 /instance/org.eclipse.ant.ui/useAnnotationsPrefPage=true
 /instance/org.eclipse.wst.common.project.facet.core/TerminalPrefInvertColors=true
+/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.DiffHeadlineBackgroundColor=71,71,71
+/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.DiffAddForegroundColor=216,254,245
 /instance/org.eclipse.cdt.ui/asm_label=217,232,247
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_space_after_opening_paren_in_parenthesized_expression=do not insert
 /instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.enabled=true
@@ -76,6 +78,7 @@
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.VariableResolutionProblem=Error
 /instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.ExpressionView"/>\n</VariablesViewMemento>
 /instance/org.eclipse.jdt.debug.ui/org.eclipse.debug.ui.VariableView.org.eclipse.jdt.debug.ui.show_null_entries=true
+/instance/ar.com.tadp.xml.rinzo.core/tag=23,198,163
 /instance/org.eclipse.jdt.ui/spelling_ignore_mixed=true
 /instance/org.eclipse.jdt.ui/content_assist_number_of_computers=12
 /instance/org.eclipse.ui.editors/breakpointIndicationColor=51,119,193
@@ -383,7 +386,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.continuation_indentation=1
 /instance/org.eclipse.linuxtools.lttng2.kernel.core/TerminalPrefInvertColors=true
 @org.eclipse.jdt.core=3.11.0.v20150602-1242
-/instance/org.python.pydev/CLASS_NAME_COLOR=230,230,250
+/instance/org.python.pydev/CLASS_NAME_COLOR=30,144,255
 /instance/org.eclipse.jdt.ui/cleanup.remove_unused_private_members=false
 /instance/org.eclipse.ui.editors/quickdiff.quickDiff=false
 /instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.color=150,236,63
@@ -437,10 +440,10 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.format_source_code=true
 /instance/org.eclipse.wst.doc.user/TerminalPrefInvertColors=true
 /instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.enabled=true
-/instance/org.eclipse.core.runtime/content-types/org.eclipse.core.runtime.xml/file-extensions=launch,world,sdf,urdf,srdf
+/instance/org.eclipse.core.runtime/content-types/org.eclipse.core.runtime.xml/file-extensions=launch,world,sdf,urdf,srdf,ui
 /instance/org.eclipse.ui.ide/TASKS_FILTERS_MIGRATE=true
-/instance/org.python.pydev/PARENS_COLOR=230,230,250
-/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.taskPriorities=normal,normal,normal,normal
+/instance/org.python.pydev/PARENS_COLOR=144,238,144
+/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.taskPriorities=normal,normal,normal,normal,normal
 /instance/org.eclipse.xsd/TerminalPrefInvertColors=true
 /instance/org.eclipse.mylyn.monitor.ui/org.eclipse.mylyn.monitor.activity.tracking.enabled.checked=true
 /instance/org.eclipse.linuxtools.ctf.parser/overriddenByCSS=,TerminalPrefInvertColors,
@@ -461,6 +464,7 @@
 /instance/org.eclipse.ui.editors/nocoverage_stylePreferences=NONE
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_union_type_in_multicatch=16
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.disabling_tag=@formatter\:off
+/instance/org.eclipse.cdt.ui/content_assist_proposals_timeout=5000
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_multiple_fields=16
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_synchronized=do not insert
 /instance/org.hamcrest.core/TerminalPrefInvertColors=true
@@ -481,7 +485,7 @@
 /instance/org.eclipse.cdt.ui/buildConsoleProblemInfoBackgroundColor=42,53,78
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.suppressWarnings=enabled
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.alignment_for_throws_clause_in_method_declaration=16
-/instance/org.eclipse.cdt.ui/org.eclipse.cdt.ui.text.templates.custom=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.eclipse.cdt.ui.text.templates.c" deleted\="false" description\="for loop with vector iterator" enabled\="true" name\="forit">for (std\:\:vector&lt;${type}&gt;\:\:iterator ${it} \= ${myvector}.begin(); ${it} \!\= ${myvector}.end(); ++${it}) {\n\t${line_selection}${cursor}\n}</template></templates>
+/instance/org.eclipse.cdt.ui/org.eclipse.cdt.ui.text.templates.custom=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.eclipse.cdt.ui.text.templates.c" deleted\="false" description\="for loop with vector iterator" enabled\="true" name\="forit">for (std\:\:vector&lt;${type}&gt;\:\:iterator ${it} \= ${myvector}.begin(); ${it} \!\= ${myvector}.end(); ++${it}) {\n\t${line_selection}${cursor}\n}</template><template autoinsert\="true" context\="org.eclipse.cdt.ui.text.templates.c" deleted\="false" description\="for loop with auto iterator" enabled\="true" name\="fora">for (const auto &amp;${it} \: ${container}) {\n\t${line_selection}${cursor}\n}</template></templates>
 /instance/org.eclipse.wst.dtdeditor.doc.user/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipselabs.matclipse.meditor/STRING_COLOR=139,105,20
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_superinterfaces_in_type_declaration=16
@@ -572,9 +576,11 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_before_finally_in_try_statement=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_between_empty_parens_in_annotation_type_member_declaration=do not insert
 /instance/org.dadacoalition.yedit/colorConstantPreferences=221,40,103
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.MemoryView.orientation=0
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_space_before_colon_in_case=do not insert
 /instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.show_monitor_thread_info=true
 /instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.enabled=true
+/instance/com.python.pydev.refactoring/USE_MARK_OCCURRENCES_IN_STRINGS=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.lineSplit=9999
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.format_line_comment_starting_on_first_column=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_body_declarations_compare_to_enum_declaration_header=true
@@ -591,6 +597,7 @@
 /instance/org.eclipse.jdt.ui/semanticHighlighting.interface.color=128,242,246
 /instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.bold=true
 /instance/org.eclipse.cdt.managedbuilder.core/properties/lab-1.cdt.managedbuild.target.macosx.exe.139353807/cdt.managedbuild.config.gnu.macosx.exe.debug.1810614020=cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1422593044\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1566317332\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.archiver.macosx.base.890386163\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug.781158745\=rebuildState\\\=false\\n\ncdt.managedbuild.config.gnu.macosx.exe.debug.1810614020\=rcState\\\=-1\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1764776401\=rebuildState\\\=false\\n\ncdt.managedbuild.toolchain.gnu.macosx.exe.debug.1492390501\=rebuildState\\\=true\\n\ncdt.managedbuild.tool.gnu.assembler.macosx.exe.debug.1239486885\=rebuildState\\\=false\\n\n
+/instance/org.eclipse.cdt.ui/buildConsoleLines=2147483647
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_semicolon_in_try_resources=do not insert
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.InvalidArguments.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true}}
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unqualifiedFieldAccess=ignore
@@ -610,6 +617,7 @@
 /instance/org.eclipse.team.cvs.ssh2/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.wst.jsdt.doc/TerminalPrefInvertColors=true
 /instance/org.eclipse.cdt.managedbuilder.core/properties/libbarrett-1.2.1.null.41568307/0.1151031608=org.eclipse.cdt.build.core.settings.holder.1089452342\=rebuildState\\\=true\\n\norg.eclipse.cdt.build.core.settings.holder.libs.1878546863\=rebuildState\\\=true\\n\n0.1151031608\=rebuildState\\\=true\\n\norg.eclipse.cdt.build.core.settings.holder.686739520\=rebuildState\\\=true\\n\norg.eclipse.cdt.build.core.prefbase.toolchain.1751759086\=rebuildState\\\=true\\n\norg.eclipse.cdt.build.core.settings.holder.506501658\=rebuildState\\\=true\\n\n
+/instance/org.eclipse.cdt.ui/content_assist_autoactivation_delay=0
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_space_between_empty_brackets=do not insert
 /instance/org.eclipse.ui.editors/thcoverage_stylePreferences=NONE
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_enum_constant=insert
@@ -647,6 +655,7 @@
 /instance/org.eclipse.linuxtools.tmf.analysis.xml.ui/TerminalPrefInvertColors=true
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.AmbiguousProblem=Error
 /instance/org.eclipse.jdt.ui/cleanup.never_use_parentheses_in_expressions=true
+/instance/org.eclipse.debug.ui/DEBUG.consoleOpenOnOut=false
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.ScanfFormatStringSecurityProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true}}
 /instance/org.eclipse.jdt.ui/content_assist_autoactivation_triggers_javadoc=@\#<
 /instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.color=141,218,248
@@ -676,6 +685,7 @@
 /instance/org.eclipse.wst.xsdeditor.doc.user/TerminalPrefInvertColors=true
 /instance/org.eclipse.cdt.core.prj-lab2/indexer/preferenceScope=0
 /instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.enabled=true
++/instance/com.python.pydev.analysis/PEP8_IGNORE_WARNINGS=--max-line-length\=99
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_method_declaration=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_for=insert
 /instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont=1|Monospace|9.0|0|GTK|1|;
@@ -820,11 +830,12 @@
 /instance/org.eclipse.jdt.ui/cleanup.remove_unnecessary_casts=true
 /instance/org.eclipse.wst.xml.ui.infopop/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.jdt.ui/spelling_ignore_ampersand_in_properties=true
+/instance/org.python.pydev/FORMAT_WITH_AUTOPEP8=true
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_space_after_comma_in_array_initializer=insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_assignment_operator=insert
 /instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.color=121,171,255
 /instance/org.eclipse.wst.jsdt.ui/useAnnotationsPrefPage=true
-/instance/org.python.pydev/KEYWORD_COLOR=85,85,248
+/instance/org.python.pydev/KEYWORD_COLOR=221,40,103
 /instance/org.eclipse.wst.jsdt.ui/fontPropagated=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_bracket_in_array_allocation_expression=do not insert
 /instance/org.eclipse.wst.internet.monitor.ui/TerminalPrefInvertColors=true
@@ -869,7 +880,7 @@
 /instance/org.eclipse.jdt.ui/content_assist_parameters_background=52,57,61
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.internal.ui.navigator.layout=2
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.missingDeprecatedAnnotation=ignore
-/instance/org.python.pydev/OPERATORS_COLOR=230,230,250
+/instance/org.python.pydev/OPERATORS_COLOR=144,238,144
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.doc.comment.support=enabled
 /instance/org.eclipse.xsd.edit/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.rse.core/org.eclipse.rse.systemtype.local.systemType.defaultUserId=ntraft
@@ -1004,7 +1015,7 @@
 /instance/org.eclipse.cdt.ui/overriddenByCSS=,asm_directive,asm_label,c_braces,c_comment_task_tag,c_default,c_keyword,c_numbers,c_operators,c_string,c_type,org.eclipse.cdt.internal.ui.text.doctools.multi,org.eclipse.cdt.internal.ui.text.doctools.recognizedTag,org.eclipse.cdt.internal.ui.text.doctools.single,pp_default,pp_directive,pp_header,semanticHighlighting.class.color,semanticHighlighting.class.enabled,semanticHighlighting.class.bold,semanticHighlighting.enum.color,semanticHighlighting.enum.enabled,semanticHighlighting.enum.italic,semanticHighlighting.enumerator.color,semanticHighlighting.enumerator.enabled,semanticHighlighting.externalSDK.color,semanticHighlighting.externalSDK.enabled,semanticHighlighting.field.color,semanticHighlighting.field.enabled,semanticHighlighting.function.color,semanticHighlighting.function.enabled,semanticHighlighting.functionDeclaration.color,semanticHighlighting.functionDeclaration.enabled,semanticHighlighting.functionDeclaration.bold,semanticHighlighting.localVariable.color,semanticHighlighting.localVariable.enabled,semanticHighlighting.localVariableDeclaration.color,semanticHighlighting.localVariableDeclaration.enabled,semanticHighlighting.macroDefinition.color,semanticHighlighting.macroDefinition.enabled,semanticHighlighting.macroDefinition.bold,semanticHighlighting.method.color,semanticHighlighting.method.enabled,semanticHighlighting.methodDeclaration.color,semanticHighlighting.methodDeclaration.enabled,semanticHighlighting.methodDeclaration.bold,semanticHighlighting.namespace.color,semanticHighlighting.namespace.enabled,semanticHighlighting.parameterVariable.color,semanticHighlighting.parameterVariable.enabled,semanticHighlighting.staticField.color,semanticHighlighting.staticField.enabled,semanticHighlighting.staticMethod.color,semanticHighlighting.staticMethod.enabled,semanticHighlighting.typedef.color,semanticHighlighting.typedef.enabled,semanticHighlighting.typedef.bold,semanticHighlighting.typeParameter.color,semanticHighlighting.typeParameter.enabled,
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_annotations=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.missingHashCodeMethod=warning
-/instance/org.eclipse.ui.editors/pydevOccurrenceIndicationColor=139,139,1
+/instance/org.eclipse.ui.editors/pydevOccurrenceIndicationColor=46,129,48
 /instance/org.eclipse.jdt.apt.pluggable.core/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.bold=true
 /instance/org.eclipse.cdt.ui/scalability.detect=false
@@ -1107,7 +1118,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentSuffixes=
 /instance/org.eclipse.jdt.ui/cleanup.organize_imports=true
 /instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT|org.eclipse.jdt.debug.ui.DETAIL_PANE_METHOD_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_METHOD_BREAKPOINT|
-/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.lineSplit=80
+/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.lineSplit=120
 /instance/org.eclipse.cdt.ui/content_assist_disabled_computers=org.eclipse.cdt.ui.parserProposalCategory\u0000org.eclipse.cdt.ui.textProposalCategory\u0000
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JRE_LIB=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
 /instance/org.eclipse.debug.ui/org.eclipse.debug.ui.build_before_launch=false
@@ -1241,7 +1252,6 @@
 /instance/org.eclipse.ui/PROMPT_WHEN_SAVEABLE_STILL_OPEN=false
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_new_line_before_colon_in_constructor_initializer_list=do not insert
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionForeground=147,161,161
-/instance/org.python.pydev/SUBSTITUTE_TABS=false
 /instance/org.eclipse.ui.navigator/org.eclipse.ui.navigator.ProjectExplorer.filterActivation=\:org.eclipse.jdt.java.ui.filters.HideOutputFolder\:org.python.pydev.navigator.filters.hidePyoFiles\:org.eclipse.jdt.java.ui.filters.HideImportDeclaration\:org.eclipse.jdt.java.ui.filters.HideEmptyInnerPackages\:org.eclipse.cdt.ui.navigator.filters.ForwardDeclarationFilter\:org.python.pydev.navigator.filters.hidePycFiles\:org.eclipse.cdt.ui.navigator.filters.AnonymousStructFilter\:org.python.pydev.navigator.filters.endsWithClass\:org.eclipse.jdt.java.ui.filters.HideSyntheticMembers\:org.eclipse.jdt.java.ui.filters.HideInnerClassFiles\:org.python.pydev.navigator.filters.hidePyTildaFiles\:org.eclipse.mylyn.tasks.ui.navigator.filters.tasks\:org.eclipse.jdt.java.ui.filters.HidePackageDeclaration\:org.python.pydev.navigator.filters.customFilters\:org.python.pydev.navigator.filters.Imports\:
 /instance/org.eclipse.jdt.ui/pf_coloring_key=217,232,247
 /instance/org.eclipse.wst.common.snippets/TerminalPrefInvertColors=true
@@ -1262,7 +1272,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_bracket_in_array_reference=do not insert
 /instance/org.eclipselabs.matclipse.meditor/AbstractTextEditor.Color.SelectionBackground=62,81,93
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_assignment_operator=insert
-/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground=131,148,150
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground=229,229,229
 /instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.enabled=true
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.brace_position_for_block_in_case=end_of_line
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_type_parameters=insert
@@ -1324,10 +1334,11 @@
 /instance/org.eclipse.jdt.ui/cleanup.always_use_this_for_non_static_field_access=false
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_this_for_non_static_field_access=false
 /instance/org.eclipse.ui.workbench/resourcetypes=<?xml version\="1.0" encoding\="UTF-8"?>\n<editors version\="3.1">\n<info extension\="in" name\="Makefile">\n<editor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n</info>\n<info extension\="class without source" name\="*">\n<editor id\="org.eclipse.jdt.ui.ClassFileEditorNoSource"/>\n</info>\n<info extension\="yml" name\="*">\n<editor id\="org.dadacoalition.yedit.editor.YEdit"/>\n</info>\n<info extension\="m4" name\="ltgcc">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="m4" name\="ltoptions">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="yaml" name\="*">\n<editor id\="org.dadacoalition.yedit.editor.YEdit"/>\n</info>\n<info extension\="ac" name\="configure">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="am" name\="Makefile">\n<editor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n</info>\n<info extension\="sum" name\="gmon">\n<editor id\="org.eclipse.linuxtools.gprof.editor.single"/>\n<defaultEditor id\="org.eclipse.linuxtools.gprof.editor.single"/>\n</info>\n<info extension\="jpage" name\="*"/>\n<info extension\="cmake" name\="*">\n<editor id\="com.cthing.cmakeed.ui.editor.CMakeEditor"/>\n<defaultEditor id\="com.cthing.cmakeed.ui.editor.CMakeEditor"/>\n</info>\n<info extension\="shtml" name\="*">\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\n</info>\n<info extension\="setup" name\="*">\n<editor id\="org.eclipse.oomph.setup.presentation.SetupEditorID"/>\n</info>\n<info extension\="html" name\="*">\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\n</info>\n<info extension\="htm" name\="*">\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\n</info>\n<info extension\="m4" name\="acinclude">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="supp" name\="*">\n<editor id\="org.eclipse.linuxtools.valgrind.editor.suppEditor"/>\n</info>\n<info extension\="js" name\="*"/>\n<info extension\="in" name\="configure">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="py" name\="*">\n<editor id\="org.python.pydev.editor.PythonEditor"/>\n<defaultEditor id\="org.python.pydev.editor.PythonEditor"/>\n</info>\n<info extension\="pxi" name\="*">\n<editor id\="org.python.pydev.editor.PythonEditor"/>\n<defaultEditor id\="org.python.pydev.editor.PythonEditor"/>\n</info>\n<info extension\="gcda" name\="*">\n<editor id\="org.eclipse.linuxtools.gcov.editor"/>\n<defaultEditor id\="org.eclipse.linuxtools.gcov.editor"/>\n</info>\n<info extension\="pxd" name\="*">\n<editor id\="org.python.pydev.editor.PythonEditor"/>\n<defaultEditor id\="org.python.pydev.editor.PythonEditor"/>\n</info>\n<info extension\="" name\="ChangeLog">\n<editor id\="org.eclipse.linuxtools.changelog.core.editor6"/>\n<defaultEditor id\="org.eclipse.linuxtools.changelog.core.editor6"/>\n</info>\n<info extension\="spec2" name\="*">\n<editor id\="org.eclipse.linuxtools.rpm.ui.editor.SpecfileEditor"/>\n</info>\n<info extension\="properties" name\="sample"/>\n<info extension\="m4" name\="lt~obsolete">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="m4" name\="aclocal">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="gcno" name\="*">\n<editor id\="org.eclipse.linuxtools.gcov.editor"/>\n<defaultEditor id\="org.eclipse.linuxtools.gcov.editor"/>\n</info>\n<info extension\="stp" name\="*">\n<editor id\="org.eclipse.linuxtools.internal.systemtap.ui.ide.editors.stp.STPEditor"/>\n<defaultEditor id\="org.eclipse.linuxtools.internal.systemtap.ui.ide.editors.stp.STPEditor"/>\n</info>\n<info extension\="pyw" name\="*">\n<editor id\="org.python.pydev.editor.PythonEditor"/>\n<defaultEditor id\="org.python.pydev.editor.PythonEditor"/>\n</info>\n<info extension\="pyx" name\="*">\n<editor id\="org.python.pydev.editor.PythonEditor"/>\n<defaultEditor id\="org.python.pydev.editor.PythonEditor"/>\n</info>\n<info extension\="m4" name\="libtool">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="m4" name\="ltversion">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="workingsets" name\="*">\n<editor id\="org.eclipse.oomph.workingsets.presentation.WorkingSetsEditorID"/>\n</info>\n<info extension\="out" name\="gmon">\n<editor id\="org.eclipse.linuxtools.gprof.editor.single"/>\n<defaultEditor id\="org.eclipse.linuxtools.gprof.editor.single"/>\n</info>\n<info extension\="m4" name\="ltdl">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="jardesc" name\="*">\n<editor id\="org.eclipse.jdt.ui.JARDescEditor"/>\n<defaultEditor id\="org.eclipse.jdt.ui.JARDescEditor"/>\n</info>\n<info extension\="am" name\="*">\n<editor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editors.AutomakeEditor"/>\n</info>\n<info extension\="m4" name\="ltsugar">\n<editor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n<defaultEditor id\="org.eclipse.cdt.autotools.ui.editor.autoconf"/>\n</info>\n<info extension\="server" name\="*"/>\n<info extension\="spec" name\="*">\n<editor id\="org.eclipse.linuxtools.rpm.ui.editor.SpecfileEditor"/>\n<editor id\="org.eclipse.linuxtools.rpm.ui.editor.forms.SpecfileFormEditor"/>\n</info>\n</editors>
-/instance/org.python.pydev/NUMBER_COLOR=204,5,5
+/instance/org.python.pydev/NUMBER_COLOR=141,218,248
 /instance/org.eclipse.cdt.managedbuilder.core/properties/playcv.cdt.managedbuild.target.macosx.exe.693760499/cdt.managedbuild.config.macosx.exe.release.1936455402=\#\n\#Sun Jan 22 15\:50\:03 EST 2012\ncdt.managedbuild.tool.gnu.assembler.macosx.exe.release.465616728\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.release.1143662263\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.gnu.c.compiler.macosx.exe.release.406069763\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.macosx.c.linker.macosx.exe.release.2144566615\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.toolchain.gnu.macosx.exe.release.1123219592\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.gnu.archiver.macosx.base.1985104235\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\ncdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.release.333016461\=\\\#\\n\\\#Sun Jan 22 15\\\:50\\\:03 EST 2012\\nrebuildState\\\=true\\n\n
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_paren_in_try=do not insert
 /instance/org.eclipse.cdt.core.prj-lab5/indexer/preferenceScope=0
+/instance/org.python.pydev/AUTOPEP8_PARAMETERS=--max-line-length\=99 -a
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_semicolon_in_try_resources=insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_before_while_in_do_statement=do not insert
 /instance/org.eclipse.wst.jsdt.debug.core/TerminalPrefInvertColors=true
@@ -1365,7 +1376,7 @@
 /instance/org.eclipse.cdt.core/org.eclipse.cdt.core.formatter.insert_space_before_closing_paren_in_if=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_binary_operator=insert
 /instance/org.eclipse.jdt.ui/cleanup.use_blocks=false
-/instance/org.python.pydev/DECORATOR_COLOR=255,255,255
+/instance/org.python.pydev/DECORATOR_COLOR=255,215,0
 /instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 /instance/org.eclipse.jdt.ui/semanticHighlighting.class.bold=true
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.MemberDeclarationNotFoundProblem=Error
@@ -1482,7 +1493,7 @@ file_export_version=3.0
 /instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.enabled=true
 /instance/org.eclipselabs.matclipse.meditor/HTML_HELP_DEFPAGE=file\:///usr/local/MATLAB/R2014a/help/documentation-center.html
 /instance/org.eclipse.jdt.ui/java_string=23,198,163
-/instance/org.python.pydev/FUNC_NAME_COLOR=230,230,250
+/instance/org.python.pydev/FUNC_NAME_COLOR=144,238,144
 /instance/org.eclipse.cdt.codan.core/org.eclipse.cdt.codan.internal.checkers.AmbiguousProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true}}
 /instance/org.eclipse.jdt.ui/cleanup.add_missing_annotations=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.format_javadoc_comments=true
@@ -1539,7 +1550,7 @@ file_export_version=3.0
 /instance/org.eclipse.wst.jsdt.ui/org.eclipse.wst.jsdt.ui.formatterprofiles.version=11
 /configuration/org.eclipse.ui.ide/RECENT_WORKSPACES_PROTOCOL=3
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_expressions_in_array_initializer=16
-/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.taskTags=TODO ntraft,TODO,FIXME,XXX
+/instance/org.eclipse.cdt.core/org.eclipse.cdt.core.taskTags=TODO(ntraft),TODO ntraft,TODO,FIXME,XXX
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.blank_lines_before_field=1
 /instance/org.eclipse.jdt.ui/cleanup.use_this_for_non_static_method_access=false
 /instance/org.eclipse.cdt.ui/semanticHighlighting.field.enabled=true
@@ -1655,7 +1666,7 @@ file_export_version=3.0
 /instance/org.eclipse.jdt.junit/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.wst.common.project.facet.ui/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.cdt.managedbuilder.core/properties/lab2.null.379473293/cdt.managedbuild.toolchain.gnu.macosx.base.1519007152=cdt.managedbuild.toolchain.gnu.macosx.base.156714014\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.cpp.compiler.macosx.base.825255793\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.macosx.cpp.linker.macosx.base.2096740314\=rebuildState\\\=false\\n\ncdt.managedbuild.toolchain.gnu.macosx.base.1519007152\=rcState\\\=0\\nrebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.c.compiler.macosx.base.1263764397\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.assembler.macosx.base.1975847318\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.macosx.c.linker.macosx.base.640691192\=rebuildState\\\=false\\n\ncdt.managedbuild.tool.gnu.archiver.macosx.base.2081145087\=rebuildState\\\=false\\n\n
-/instance/org.python.pydev/SELF_COLOR=230,230,250
+/instance/org.python.pydev/SELF_COLOR=85,85,248
 /instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont=1|Monospace|9.0|0|GTK|1|;
 /instance/org.eclipse.ui.editors/filteredSearchResultIndicationColor=34,164,99
 /instance/org.eclipse.cdt.core.prj-lab4/indexer/preferenceScope=0
