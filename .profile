@@ -15,6 +15,7 @@ prepend2path '/opt/local/sbin'
 
 # Homebrew path. 
 prepend2path '/usr/local/bin'
+prepend2path '/usr/local/sbin'
 
 # Support for ccache compiler and icecream.
 prepend2path '/usr/lib/ccache'
