@@ -6,3 +6,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+[ -r /Users/ntraft/.profile_lda ] && . /Users/ntraft/.profile_lda
