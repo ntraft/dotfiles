@@ -15,7 +15,6 @@ prepend2path '/opt/local/sbin'
 
 # Homebrew path. 
 prepend2path '/usr/local/bin'
-prepend2path '/usr/local/sbin'
 
 # Support for ccache compiler and icecream.
 prepend2path '/usr/lib/ccache'
@@ -29,6 +28,9 @@ append2path $DEVDIR'/android-ndk/tools'
 
 # Path for Erlang.
 append2path '/opt/local/lib/erlang/bin'
+
+# Path to Python tools such as pipenv (and perhaps some other locally installed tools?).
+prepend2path "$HOME/.local/bin"
 
 # Include user's private bin if it exists.
 prepend2path "$HOME/bin"
@@ -101,8 +103,14 @@ gdiff() {
 alias path='echo $PATH | tr -s ":" "\n"'
 alias manpath='echo $MANPATH | tr -s ":" "\n"'
 
+# Mac-specific: use keychain to manage keys.
 if command -v keychain >/dev/null 2>&1; then
 	eval `keychain --eval id_rsa`
+fi
+
+# If pyenv is available, allow it to manage the python being invoked in this shell.
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
 
 if [ -f $HOME/.localrc ]; then
