@@ -103,9 +103,9 @@ gdiff() {
 alias path='echo $PATH | tr -s ":" "\n"'
 alias manpath='echo $MANPATH | tr -s ":" "\n"'
 
-# Mac-specific: use keychain to manage keys.
+# If `keychain` app is present, use it to manage ssh keys.
 if command -v keychain >/dev/null 2>&1; then
-	eval `keychain --eval id_rsa`
+	eval `keychain --eval --agents ssh id_rsa`
 fi
 
 # If pyenv is available, allow it to manage the python being invoked in this shell.
