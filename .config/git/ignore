@@ -7,8 +7,10 @@
 .DS_Store
 
 # IntelliJ project files
-.idea/misc.xml
-.idea/workspace.xml
+# I used to do this manually, but I think IDEA does it for us now, within the
+# workspace folder. Those clever JetBrains folks!
+#.idea/misc.xml
+#.idea/workspace.xml
 
 # Eclipse project files
 .metadata
