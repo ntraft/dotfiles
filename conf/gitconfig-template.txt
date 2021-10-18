@@ -1,0 +1,34 @@
+[color]
+	ui = auto
+[user]
+	name = John Doe
+	email = jdoe@example.com
+[init]
+	defaultBranch = main
+[merge]
+	defaultToUpstream = true
+	conflictstyle = diff3
+	tool = meld
+[alias]
+	st = status -sb
+	ci = commit
+	cir = commit -c HEAD --reset-author
+	co = checkout
+	di = diff
+	dic = diff --cached
+	din = diff --no-index
+	br = branch
+	bv = branch -vv
+	currbranch = rev-parse --abbrev-ref HEAD
+	newbranch = checkout -t -b
+	nb = checkout -t -b
+	publish = push -u origin
+	pushup = push origin
+	aa = add --all
+	au = add -u
+	sh = show --name-status
+	# Graphical git log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --all
+	# Detailed view of branches by age
+	bl=for-each-ref --sort=-committerdate --format='%(color:red)%(objectname:short) %(color:green)%(committerdate:relative) %(color:reset)%(refname:short) %(color:blue)%(authorname)' refs/heads/
