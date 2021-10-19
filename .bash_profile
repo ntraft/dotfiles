@@ -5,5 +5,3 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
-
-[ -r /Users/ntraft/.profile_lda ] && . /Users/ntraft/.profile_lda

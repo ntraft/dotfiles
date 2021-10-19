@@ -73,4 +73,3 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-[ -r /Users/ntraft/.profile_lda ] && . /Users/ntraft/.profile_lda
