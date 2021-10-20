@@ -114,7 +114,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Source some files that should only contain system-specific settings that
+# should not be shared across machines.
 if [ -f $HOME/.localrc ]; then
 	source $HOME/.localrc
+fi
+if [ -f $HOME/.local/profile ]; then
+	source $HOME/.local/profile
 fi
 

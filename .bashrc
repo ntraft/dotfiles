@@ -12,9 +12,12 @@ shopt -s dotglob
 # Set up virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Development
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-	source /usr/local/bin/virtualenvwrapper.sh
-fi
+# This is obsolete since Python 3.4 or so, and since we're using python3 by
+# default it only results in errors. So I guess let's disable it for now, and
+# probably delete these lines altogether in the future.
+#if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#	source /usr/local/bin/virtualenvwrapper.sh
+#fi
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -75,21 +78,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# NTRAFT NOTE: It seems best for Conda to just manage this, since it has slight
-# differences for different shells. So let it add to the rc files instead of
-# moving it to the ~/.profile.
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/users/n/t/ntraft/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/users/n/t/ntraft/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/users/n/t/ntraft/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/users/n/t/ntraft/miniconda3/bin:$PATH"
-    fi
+# Source some files that should only contain system-specific settings that
+# should not be shared across machines.
+if [ -f $HOME/.local/bashrc ]; then
+	source $HOME/.local/bashrc
 fi
-unset __conda_setup
-# <<< conda initialize <<<
-
