@@ -74,3 +74,22 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# NTRAFT NOTE: It seems best for Conda to just manage this, since it has slight
+# differences for different shells. So let it add to the rc files instead of
+# moving it to the ~/.profile.
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/users/n/t/ntraft/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/users/n/t/ntraft/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/users/n/t/ntraft/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/users/n/t/ntraft/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
