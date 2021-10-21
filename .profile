@@ -111,6 +111,7 @@ fi
 
 # If pyenv is available, allow it to manage the python being invoked in this shell.
 if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
 fi
 
