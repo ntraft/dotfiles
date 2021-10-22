@@ -1,0 +1,30 @@
+# Common Profile
+#
+# For items that should only be done at login, will be inherited by all
+# subshells, and are common across all shell types (bash, zsh, etc.).
+#
+# This should be sourced by .bash_profile, .zprofile, etc.
+
+# Uncomment this in the top-level shell files (.common_profile, .commonrc) in
+# order to get debug print statements at shell startup time.
+#SHELL_DEBUG=true
+if [ -n "$SHELL_DEBUG" ]; then
+    echo "Running .common_profile"
+fi
+
+# Provides functions for adding items to PATH.
+if [ -f $HOME/.add2path ]; then
+	source $HOME/.add2path
+fi
+
+# A convenient function for swapping files.
+function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
+
+# My dev directory is always here.
+DEVDIR=$HOME/Development
+
+# Source some files that should only contain system-specific settings that
+# should not be shared across machines.
+if [ -f $HOME/.local/common_profile ]; then
+	source $HOME/.local/common_profile
+fi

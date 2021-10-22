@@ -1,7 +1,26 @@
+# Common Resources
+#
+# For items that should be run anew by each new shell, even subshells. Includes
+# shell styling and things that won't be inherited by subshells. Also includes
+# anything that is only intended for interactive shells, but not all shells.
+# Only for items which are common across all shell types (bash, zsh, etc.).
+#
+# This should be sourced by .bashrc, .zshrc, etc.
+
+# Uncomment this in the top-level shell files (.common_profile, .commonrc) in
+# order to get debug print statements at shell startup time.
+#SHELL_DEBUG=true
+if [ -n "$SHELL_DEBUG" ]; then
+    echo "Running .commonrc"
+fi
+
 # Provides functions for adding items to PATH.
 if [ -f $HOME/.add2path ]; then
 	source $HOME/.add2path
 fi
+
+# A convenient function for swapping files.
+function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
 
 # My dev directory is always here.
 DEVDIR=$HOME/Development
@@ -70,9 +89,6 @@ export PYTHONSTARTUP=$HOME/.pystartup
 # -i gives case-insensitive searches. (Can be toggled when in less, by typing -i.)
 LESS=-Ri
 
-# A convenient function for swapping files.
-#function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
-
 # Various aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# OS X ls doesn't have the --color option (and doesn't need it).
@@ -119,8 +135,5 @@ fi
 # should not be shared across machines.
 if [ -f $HOME/.localrc ]; then
 	source $HOME/.localrc
-fi
-if [ -f $HOME/.local/profile ]; then
-	source $HOME/.local/profile
 fi
 

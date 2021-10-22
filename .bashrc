@@ -4,8 +4,14 @@
 # 
 # Modified by Neil Traft
 
-# TODO: Do we want to run "common" things BEFORE or AFTER shell-specifics?
+# For now, let's run "common" things first, since they contain convenience
+# functions that we want to use everywhere. After that, we customize these base
+# options for each particular shell.
 source ~/.commonrc
+
+if [ -n "$SHELL_DEBUG" ]; then
+    echo "Running .bashrc"
+fi
 
 # Allow globs to expand hidden files
 shopt -s dotglob

@@ -1,3 +1,11 @@
+# For now, we will run this first, to import our common convenience functions.
+# Hopefully it is not problematic doing all these things *before* oh-my-zsh.
+source $HOME/.commonrc
+
+if [ -n "$SHELL_DEBUG" ]; then
+    echo "Running .zshrc"
+fi
+
 # Use the Homebrew python on OS X.
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
@@ -108,8 +116,3 @@ unsetopt autonamedirs
 if [ -f $HOME/.local/zshrc ]; then
 	source $HOME/.local/zshrc
 fi
-
-# This needs to be here; even though oh-my-zsh RUNS this file, it does not SOURCE it.
-# TODO: Do we want to run "common" things BEFORE or AFTER shell-specifics?
-source $HOME/.commonrc
-
