@@ -110,5 +110,6 @@ if [ -f $HOME/.local/zshrc ]; then
 fi
 
 # This needs to be here; even though oh-my-zsh RUNS this file, it does not SOURCE it.
-source $HOME/.profile
+# TODO: Do we want to run "common" things BEFORE or AFTER shell-specifics?
+source $HOME/.commonrc
 

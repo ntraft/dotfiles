@@ -4,7 +4,8 @@
 # 
 # Modified by Neil Traft
 
-source ~/.profile
+# TODO: Do we want to run "common" things BEFORE or AFTER shell-specifics?
+source ~/.commonrc
 
 # Allow globs to expand hidden files
 shopt -s dotglob
