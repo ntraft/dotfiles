@@ -9,6 +9,9 @@
 	defaultToUpstream = true
 	conflictstyle = diff3
 	tool = meld
+[pager]
+	# Force diffs to always be opened in a pager, not printed to command line.
+	diff = less -+F -+X
 [alias]
 	st = status -sb
 	ci = commit
