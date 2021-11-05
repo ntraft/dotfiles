@@ -3,7 +3,7 @@
 # first.
 source $HOME/.common_profile
 
-if [ -n "$SHELL_DEBUG" ]; then
+if $SHELL_DEBUG; then
     echo "Running .zprofile"
 fi
 

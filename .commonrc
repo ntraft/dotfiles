@@ -7,10 +7,13 @@
 #
 # This should be sourced by .bashrc, .zshrc, etc.
 
-# Uncomment this in the top-level shell files (.common_profile, .commonrc) in
+# Set this to true in the top-level shell files (.common_profile, .commonrc) in
 # order to get debug print statements at shell startup time.
-#SHELL_DEBUG=true
-if [ -n "$SHELL_DEBUG" ]; then
+SHELL_DEBUG=false
+# But, always turn it off in non-interactive shells. Otherwise, printing things
+# can break scp and prevent us copying files!! (Are you kidding me??)
+[ ! -t 0 ] && SHELL_DEBUG=false
+if $SHELL_DEBUG; then
     echo "Running .commonrc"
 fi
 

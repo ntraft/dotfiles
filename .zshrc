@@ -2,7 +2,7 @@
 # Hopefully it is not problematic doing all these things *before* oh-my-zsh.
 source $HOME/.commonrc
 
-if [ -n "$SHELL_DEBUG" ]; then
+if $SHELL_DEBUG; then
     echo "Running .zshrc"
 fi
 

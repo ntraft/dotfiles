@@ -9,7 +9,7 @@
 # options for each particular shell.
 source ~/.commonrc
 
-if [ -n "$SHELL_DEBUG" ]; then
+if $SHELL_DEBUG; then
     echo "Running .bashrc"
 fi
 
@@ -26,8 +26,15 @@ export PROJECT_HOME=$HOME/Development
 #	source /usr/local/bin/virtualenvwrapper.sh
 #fi
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# If not running interactively, don't do anything further.
+if [ -z "$PS1" ]; then
+	# However, we still want to give a chance for any system-specific actions
+	# that need to be taken in all shells (such as conda setup).
+	if [ -f $HOME/.local/bashrc ]; then
+		source $HOME/.local/bashrc
+	fi
+	return
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
