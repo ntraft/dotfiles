@@ -13,6 +13,11 @@ if $SHELL_DEBUG; then
     echo "Running .bashrc"
 fi
 
+# Source global definitions first.
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 # Allow globs to expand hidden files
 shopt -s dotglob
 
@@ -62,6 +67,34 @@ shopt -s checkwinsize
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
+
+# Customize terminal window title to be similar to PS1 prompt.
+function print_command_prompt() {
+    CURRDIR="${PWD/#$HOME/~}"  # Replace HOME w/ tilde.
+	CURRDIR="${CURRDIR##*/}"  # Trim full path, keep only final dir.
+	printf $1 "${HOSTNAME%%.*}" "${CURRDIR}"  # Print using given syntax.
+}
+case $TERM in
+xterm*|vte*)
+  if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
+      PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+  elif [ "${VTE_VERSION:-0}" -ge 3405 ]; then
+      PROMPT_COMMAND="__vte_prompt_command"
+  else
+      PROMPT_COMMAND='print_command_prompt "\033]0;%s:%s\007"'
+  fi
+  ;;
+screen*)
+  if [ -e /etc/sysconfig/bash-prompt-screen ]; then
+      PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+  else
+      PROMPT_COMMAND='print_command_prompt "\033k%s:%s\033\\"'
+  fi
+  ;;
+*)
+  [ -e /etc/sysconfig/bash-prompt-default ] && PROMPT_COMMAND=/etc/sysconfig/bash-prompt-default
+  ;;
+esac
 
 # Color the prompt
 export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 5)\]\W\[$(tput setaf 2)\] $\[$(tput sgr0)\] "
