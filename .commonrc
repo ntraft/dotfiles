@@ -25,9 +25,6 @@ fi
 # A convenient function for swapping files.
 function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
 
-# My dev directory is always here.
-DEVDIR=$HOME/Development
-
 
 # MacPorts paths.
 prepend2path '/opt/local/bin'
@@ -138,5 +135,8 @@ fi
 # should not be shared across machines.
 if [ -f $HOME/.localrc ]; then
 	source $HOME/.localrc
+fi
+if [ -f $HOME/.local/commonrc ]; then
+	source $HOME/.local/commonrc
 fi
 
