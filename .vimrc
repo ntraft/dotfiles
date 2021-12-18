@@ -37,6 +37,9 @@ set dir=~/.vimbackup
 
 " Turn on line numbers in gutter
 set number
+
+" Indent with spaces, not tabs.
+set expandtab
 " --NTRAFT--
 
 set history=50		" keep 50 lines of command line history
