@@ -12,14 +12,22 @@
 [pager]
 	# Force diffs to always be opened in a pager, not printed to command line.
 	diff = less -+F -+X
+	# Same for some other commands.
+	log = less -+F -+X
+	show = less -+F -+X
 [alias]
 	st = status -sb
 	ci = commit
 	cir = commit -c HEAD --reset-author
 	co = checkout
+    up = checkout @{u}
 	di = diff
 	dic = diff --cached
-	din = diff --no-index
+	din = diff --name-status
+    diu = diff @{u}
+    dinu = diff --name-status @{u}
+    compare = diff --no-index
+    cmp = diff --no-index
 	br = branch
 	bv = branch -vv
 	currbranch = rev-parse --abbrev-ref HEAD
