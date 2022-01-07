@@ -1,0 +1,17 @@
+if $SHELL_DEBUG; then
+    echo "Running .local/common_profile"
+fi
+
+# Sad that we have to add this. Current default git version is 1.8, WAY too
+# old. Many changes came in git 2.0. This will slow down terminal startup
+# times, but module should be faster than spack, and we can avoid loading it
+# when not in an interactive terminal. That way it won't slow down things like
+# scp.
+#[ -t 0 ] && spack load git
+[ -t 0 ] && module load git-2.27.0-gcc-7.3.0-k52nydc
+
+# Reconfigure DEVDIR to live on gpfs2 (scratch).
+export DEVDIR=$HOME/scratch/Development
+
+# Add neuromanager tools to path.
+prepend2path $DEVDIR'/neuromanager'

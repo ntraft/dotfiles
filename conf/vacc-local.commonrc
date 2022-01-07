@@ -1,0 +1,23 @@
+# My jobs.
+alias q='squeue -u $USER'
+
+# Other queued jobs.
+alias dgq='squeue -p dggpu'
+alias bdq='squeue -p bdgpu'
+alias bmq='squeue -p bluemoon'
+
+# Find and display the log for a job ID.
+# Assumes you're in the project root and all jobs are under 'experiments/'.
+function log() { find experiments -name "slurm-$1.out" -exec less '{}' \; ; }
+
+# Job priorities on DeepGreen.
+# sprio's default display format sucks, so let's always use this format.
+alias sprio='sprio -S -y -o "%.15i %9r %.8u %.10Y %.10S %.10A %.10B %.10F %.10J %.10P %.10Q %.11N %.30T"'
+alias dgprio-raw='sprio -p dggpu'
+alias dgprio-raw-norm='dgprio_raw -o "%.15i %9r %.8u %.10y %.10S %.10a %.10b %.10f %.10j %.10p %.10q %.11N %.30t"'
+alias dgprio='dgprio_raw | less'
+alias dgprio-norm='dgprio_raw_norm | less'
+alias dgweights='dgprio_raw -w'
+
+# Move Slurm output junk logs into temp folder to be cleaned up later.
+alias cleanslurm='mv slurm-*.out /tmp/ntraft-slurm-trash'
