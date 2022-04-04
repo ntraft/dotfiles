@@ -6,11 +6,6 @@ if $SHELL_DEBUG; then
     echo "Running .zshrc"
 fi
 
-# Use the Homebrew python on OS X.
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -62,7 +57,7 @@ export PROJECT_HOME=$HOME/Development
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mercurial svn brew osx sublime macports pip python virtualenv virtualenvwrapper)
+plugins=(git mercurial svn brew macos sublime macports pip python virtualenv)
 
 if [ -d $ZSH ]; then
 	source $ZSH/oh-my-zsh.sh
