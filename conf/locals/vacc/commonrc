@@ -1,0 +1,34 @@
+# My jobs.
+alias q='squeue -u $USER'
+
+# Other queued jobs.
+function sq() { squeue -p "$1" | less ; }
+alias dgq='sq dggpu'
+alias bdq='sq bdgpu'
+alias bmq='sq bluemoon'
+
+# Find and display the log for a job ID. Assumes you're in the project root and
+# all jobs are under 'experiments/'.
+function log() { locate -d experiments/locatedb -b "slurm-$1*.out" | xargs less ; }
+# Same, but delete the log.
+function rmlog() { locate -d experiments/locatedb -b "slurm-$1*.out" | xargs rm ; }
+# Simply print out the found log (good for piping into another step, or
+# debugging the log search).
+function logp() { locate -d experiments/locatedb -b "slurm-$1*.out" ; }
+# Command to update the mlocate database to make the log search commands work.
+function uplog() { time updatedb -l 0 -o experiments/locatedb -U experiments/ ; }
+
+# Job details
+alias job='scontrol show job'
+# sprio's default display format sucks, so let's always use this format.
+alias sprio='sprio -S -y -o "%.15i %9r %.8u %.10Y %.10S %.10A %.10B %.10F %.10J %.10P %.10Q %.11N %.30T"'
+alias sprion='sprio -o "%.15i %9r %.8u %.10y %.10S %.10a %.10b %.10f %.10j %.10p %.10q %.11N %.30t"'
+function prio() { sprio -p "$1" | less ; }
+function prion() { sprion -p "$1" | less ; }
+alias dgp='prio dggpu'
+alias bdp='prio bdgpu'
+alias bmp='prio bluemoon'
+
+# Move Slurm output junk logs into temp folder to be cleaned up later.
+export SLURM_TRASH_DIR=/tmp/$USER-slurm-trash
+alias cleanslurm='mkdir -p $SLURM_TRASH_DIR && mv slurm-*.out $SLURM_TRASH_DIR'

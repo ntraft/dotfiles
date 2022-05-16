@@ -15,3 +15,10 @@ export DEVDIR=$HOME/scratch/Development
 
 # Add neuromanager tools to path.
 prepend2path $DEVDIR'/neuromanager'
+
+# This variable is set on BlackDiamond, which means on that cluster we look in
+# the wrong place for certain libraries. So we need to manually add to the path
+# to make sure things still work.
+if [ -n $LD_LIBRARY_PATH ]; then
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/users/n/t/ntraft/miniconda3/lib
+fi
