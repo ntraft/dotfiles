@@ -76,6 +76,17 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# NTRAFT: oh-my-zsh overrides these aliases from my .commonrc, so I need to
+# reset them here.
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# OS X ls doesn't have the --color option (and doesn't need it).
+	alias ls='ls -h'
+else
+	alias ls='ls --color=auto -h'
+fi
+alias l='ls -A'
+alias ll='l -l'
+
 # Some stuff for zsh even without oh-my-zsh
 setopt extendedglob notify
 unsetopt beep
