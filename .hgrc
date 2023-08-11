@@ -8,6 +8,8 @@ hgext.extdiff =
 hgext.graphlog =
 hgext.fetch =
 hgext.shelve = 
+hgext.bookmarks =
+hggit =
 
 [extdiff]
 cmd.diffy = fmdiff
