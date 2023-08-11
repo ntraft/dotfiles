@@ -43,3 +43,8 @@
 	lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --all
 	# Detailed view of branches by age
 	bl=for-each-ref --sort=-committerdate --format='%(color:red)%(objectname:short) %(color:green)%(committerdate:relative) %(color:reset)%(refname:short) %(color:blue)%(authorname)' refs/heads/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
