@@ -108,6 +108,30 @@ alias apl='dpkg -l'
 # Short command to attach my main session, or create if it doesn't exist.
 alias tm='tmux attach || tmux new -s main'
 
+# Find the first unused port in the range [8888, 9000). For Jupyter notebooks.
+findport() {
+    netstat -aln | awk '
+      $6 == "LISTEN" {
+        if ($4 ~ "[.:][0-9]+$") {
+          split($4, a, /[:.]/);
+          port = a[length(a)];
+          p[port] = 1
+        }
+      }
+      END {
+        for (i = 8888; i < 9000 && p[i]; i++){};
+        if (i == 9000) {exit 1};
+        print i
+      }
+    '
+}
+
+# Pipe webserver from VACC to local.
+function sshf() { ssh -Nfl $2\:localhost\:$2 $1; }
+function vaccf() { sshf vacc $1; }
+alias vaccjup='vaccf 8889'
+function vaccpull() { scp -r vacc:$1 ~/Downloads/$2; }
+
 # Make this a function instead of an alias so that oh-my-zsh is forced to
 # do filename completions normally.
 #alias gdiff='git diff --no-index'
