@@ -26,6 +26,9 @@ function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
 # My dev directory is always here.
 DEVDIR=$HOME/Development
 
+# Location for cached model weights from PyTorch
+TORCH_HOME=$HOME/.cache/torch
+
 # Source some files that should only contain system-specific settings that
 # should not be shared across machines.
 if [ -f $HOME/.local/common_profile ]; then
