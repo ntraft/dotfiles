@@ -101,12 +101,20 @@ alias ll='l -l'
 alias grep='GREP_COLOR="1;33" LANG=C egrep --color=auto'
 alias fgrep='GREP_COLOR="1;33" LANG=C fgrep --color=auto'
 alias egrep='GREP_COLOR="1;33" LANG=C egrep --color=auto'
+# We usually want a ps with much more output, but can't add these options
+# permanently, because they conflict with other options.
+alias psf='ps -eF'
 alias apt='sudo apt-get'
 alias app='apt-cache'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
 # Short command to attach my main session, or create if it doesn't exist.
 alias tm='tmux attach || tmux new -s main'
+# Useful alternative to `ps` which displays memory in MB.
+myps() {
+    ps -eo user,pid,ppid,vsize,rss,pcpu,cputime,cmd --no-headers --sort=-rss \
+        | awk '{if ($1 ~ /^ntraft$/ && $2 ~ /^[0-9]+$/ && $5/1024 >= 1) {printf "User: %s, PID: %s, PPID: %s, Memory (Virtual): %.2f MB, Memory (Resident): %.2f MB, CPU Time: %s, Command: ", $1, $2, $3, $4/1024, $5/1024, $7; for (i=8; i<=NF; i++) printf "%s ", $i; printf "\n"}}'
+}
 
 # Find the first unused port in the range [8888, 9000). For Jupyter notebooks.
 findport() {
