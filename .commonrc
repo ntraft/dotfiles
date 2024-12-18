@@ -116,6 +116,15 @@ myps() {
         | awk '{if ($1 ~ /^ntraft$/ && $2 ~ /^[0-9]+$/ && $5/1024 >= 1) {printf "User: %s, PID: %s, PPID: %s, Memory (Virtual): %.2f MB, Memory (Resident): %.2f MB, CPU Time: %s, Command: ", $1, $2, $3, $4/1024, $5/1024, $7; for (i=8; i<=NF; i++) printf "%s ", $i; printf "\n"}}'
 }
 
+
+# Kill ssh forwards which are left hanging around and never cleaned up.
+function killssh() {
+  ps -ef | grep $USER'.*[0-9] ssh.*[0-9]{4}:localhost:[0-9]{4}.*' | while read usr pid rest; do
+    echo "Killing: $usr $pid $rest"
+    kill -9 $pid
+  done
+}
+
 # Find the first unused port in the range [8888, 9000). For Jupyter notebooks.
 findport() {
     netstat -aln | awk '
