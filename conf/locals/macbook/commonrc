@@ -1,0 +1,2 @@
+alias jupconn='ssh -NfL 8900:localhost:8913 vacc'
+
