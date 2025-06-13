@@ -108,8 +108,7 @@ alias egrep='GREP_COLOR="1;33" LANG=C egrep --color=auto'
 # We usually want a ps with much more output, but can't add these options
 # permanently, because they conflict with other options.
 alias psf='ps -eF'
-alias apt='sudo apt-get'
-alias app='apt-cache'
+alias app='sudo apt-get'
 alias aps='apt-cache search --names-only'
 alias apl='dpkg -l'
 # Short command to attach my main session, or create if it doesn't exist.
